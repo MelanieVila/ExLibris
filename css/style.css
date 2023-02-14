@@ -1,0 +1,382 @@
+/* - - - - - - - - - - - - - - - - - - PALETA DE COLORES Y TIPOGRAFÍAS - - - - - - - - - - - - - - - - - - */
+:root {
+    --principal: #6050DC;
+    --principalOscuro: #211c88;
+    --secundario: #F0F3BD;
+    --claro: #fffcf2;
+    --oscuro: #252422;
+    --formulario: #474544;
+    --fuentePrincipal: 'Abhaya Libre', serif;
+    --fuenteSecundaria: 'Bebas Neue', serif;
+}
+
+
+
+/* - - - - - - - - - - - - - - - - - - GENERALES - - - - - - - - - - - - - - - - - - */
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: var(--fuentePrincipal);
+    background-image: url(../img/fondoblanco.jpg);
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: var(--fuentePrincipal);
+    margin: 1rem auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--principalOscuro);
+}
+
+footer {
+    margin-top: auto;
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+    margin: 5rem 0 0 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 2.2rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
+h1,
+h3,
+h4 {
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+}
+
+.contenedor {
+    max-width: 100rem;
+    margin: 0 auto;
+    background-color: var(--claro);
+}
+
+.titulos {
+    display: grid;
+    place-content: center;
+}
+
+.sombra {
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: inset 0 -3rem 3rem rgba(0, 0, 0, 0.1), 0 0 0 .2rem var(--claro), .3rem .3rem 1rem var(--oscuro);
+}
+
+
+
+/* - - - - - - - - - - - - - - - - - - NAVEGACIÓN - - - - - - - - - - - - - - - - - - */
+@media (max-width: 576px) {
+    .logo {
+        width: 50%;
+    }
+}
+
+.navegacion__enlace {
+    font-family: var(--fuentePrincipal);
+    color: var(--oscuro);
+    font-size: 2.5rem;
+}
+
+.navegacion__enlace:hover {
+    color: var(--principal);
+}
+
+
+
+/* - - - - - - - - - - - - - - - - - - FOOTER - - - - - - - - - - - - - - - - - - */
+.footer {
+    background-color: #252422;
+}
+
+.footer__logo {
+    margin: 1rem auto;
+    padding: .5rem;
+    display: block;
+}
+
+.footer h4 {
+    color: var(--claro);
+    margin: 2rem;
+}
+
+.footer a {
+    color: var(--principal);
+}
+
+.footer__redes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__tarjetas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+
+/* - - - - - - - - - - - - - - - - - - LIBROS - - - - - - - - - - - - - - - - - - */
+.libro__nombre,
+.libro__precio {
+    color: var(--principal);
+    font-family: var(--fuenteSecundaria);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.libro__nombre {
+    font-size: 2.5rem;
+}
+
+.libro__precio {
+    font-size: 2rem;
+}
+
+.libro__imagen {
+    width: 100%;
+}
+
+
+
+/* - - - - - - - - - - - - - - - - - - PÁGINA: NOVEDADES - - - - - - - - - - - - - - - - - - */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.banner {
+    width: 60%;
+    display: block;
+    margin: auto;
+}
+
+
+
+/* - - - - - - - - - - - - - - - - - - PÁGINA: EXPLORAR - - - - - - - - - - - - - - - - - - */
+.recomendacion {
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-gap: 0.5em;
+    align-items: center;
+}
+
+.recomendacion__titulo {
+    font-size: 2.8rem;
+    text-align: center;
+    font-weight: bold;
+    color: #DB2D3B;
+}
+
+.libro__recomendacion {
+    width: 100%;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.quote {
+    width: 2%;
+}
+
+.quote__texto {
+    text-align: center;
+    font-size: 2.2rem;
+    font-family: var(--fuenteSecundaria);
+}
+
+.generos {
+    list-style: none;
+}
+
+
+
+/* - - - - - - - - - - - - - - - - - - PÁGINA: NOSOTROS - - - - - - - - - - - - - - - - - - */
+.contenedor__nosotros {
+    max-width: 120rem;
+    margin: 5rem auto;
+    background-color: var(--claro);
+}
+
+.nosotros {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+
+@media (min-width: 800px) {
+    .nosotros {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.nosotros__imagen {
+    grid-row: 1 / 2;
+    width: 100%;
+}
+
+@media (min-width: 800px) {
+    .nosotros__imagen {
+        grid-column: 2 / 3;
+    }
+}
+
+.seccion__nosotros {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.beneficios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .beneficios {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.beneficio {
+    text-align: center;
+}
+
+.beneficio__titulo {
+    margin: 0 auto;
+}
+
+.ubicacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* - - - - - - - - - - - - - - - - - - PÁGINA: CONTACTO - - - - - - - - - - - - - - - - - - */
+input,
+textarea {
+    font-family: var(--fuenteSecundaria);
+    margin: 0;
+}
+
+input[type='text'],
+[type='email'],
+textarea {
+    background: none;
+    border: none;
+    border-bottom: solid .2rem var(--formulario);
+    color: var(--formulario);
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+    margin: 0 0 3rem 0;
+    padding: 0 0 1rem 0;
+    text-transform: uppercase;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+fieldset {
+    border: none;
+}
+
+#formulario {
+    margin: 2rem auto 4rem auto;
+}
+
+input[type='text']:focus,
+[type='email']:focus,
+textarea:focus {
+    outline: none;
+    padding: 0 0 1rem 0;
+}
+
+textarea {
+    line-height: 150%;
+    height: 15rem;
+    width: 100%;
+    resize: none;
+}
+
+#boton {
+    background: none;
+    border: solid .2rem var(--formulario);
+    color: var(--formulario);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+    outline: none;
+    padding: 2rem 3.5rem;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.alinear-boton {
+    display: grid;
+    place-content: center;
+}
+
+#boton:hover {
+    background: var(--formulario);
+    color: var(--claro);
+}
