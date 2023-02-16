@@ -122,14 +122,11 @@ h4 {
 }
 
 .footer__logo {
-    margin: 1rem auto;
-    padding: .5rem;
     display: block;
 }
 
 .footer h4 {
     color: var(--claro);
-    margin: 2rem;
 }
 
 .footer a {
