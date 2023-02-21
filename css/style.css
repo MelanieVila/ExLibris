@@ -95,6 +95,22 @@ h4 {
     box-shadow: inset 0 -3rem 3rem rgba(0, 0, 0, 0.1), 0 0 0 .2rem var(--claro), .3rem .3rem 1rem var(--oscuro);
 }
 
+#search-input {
+    height: 4rem;
+    width: 50rem;
+}
+
+#search-button {
+    height: 4rem;
+    width: 7rem;
+}
+
+@media (max-width: 768px) {
+    #search-input {
+        width: 25rem;
+    }
+}
+
 
 
 /* - - - - - - - - - - - - - - - - - - NAVEGACIÓN - - - - - - - - - - - - - - - - - - */
@@ -173,13 +189,39 @@ h4 {
 
 
 /* - - - - - - - - - - - - - - - - - - PÁGINA: NOVEDADES - - - - - - - - - - - - - - - - - - */
-.banner {
+.novedad--grande {
     width: 60%;
     display: block;
     margin: auto;
 }
 
+@media (max-width: 768px) {
+    .novedad--grande {
+        display: none;
+    }
+}
 
+.novedad--mini {
+    width: 40%;
+    display: block;
+    margin: auto;
+}
+
+@media (min-width: 768px) {
+    .novedad--mini {
+        display: none;
+    }
+}
+
+.libro__descripcion {
+    margin: 0 auto;
+    background-color: var(--claro);
+}
+
+.libro__generos {
+    font-weight: bold;
+    color: var(--principalOscuro);
+}
 
 /* - - - - - - - - - - - - - - - - - - PÁGINA: EXPLORAR - - - - - - - - - - - - - - - - - - */
 .recomendacion {
