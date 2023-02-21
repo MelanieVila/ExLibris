@@ -201,7 +201,6 @@ h4 {
 
 
 
-
 /* - - - - - - - - - - - - - - - - - - PÁGINA: NOVEDADES - - - - - - - - - - - - - - - - - - */
 .novedad--grande {
     width: 60%;
@@ -237,6 +236,8 @@ h4 {
     color: var(--principalOscuro);
 }
 
+
+
 /* - - - - - - - - - - - - - - - - - - PÁGINA: EXPLORAR - - - - - - - - - - - - - - - - - - */
 .recomendacion {
     display: grid;
@@ -262,31 +263,6 @@ h4 {
         grid-column: 2 / 3;
     }
 }
-
-
-
-
-/* .recomendacion {
-    max-width: 100rem;
-    margin: 0 auto;
-    background-color: var(--claro);
-    display: grid;
-    grid-template-columns: 20rem auto;
-    grid-gap: 0.5em;
-    align-items: center;
-}
-
-@media (max-width: 1440px) {
-    .recomendacion {
-        max-width: 80rem;
-    }
-}
-
-@media (max-width: 992px) {
-    .recomendacion {
-        max-width: 60rem;
-    }
-} */
 
 .recomendacion__titulo {
     font-size: 2.8rem;
