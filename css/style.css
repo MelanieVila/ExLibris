@@ -188,6 +188,20 @@ h4 {
 
 
 
+/* - - - - - - - - - - - - - - - - - - PÁGINA: INICIO - - - - - - - - - - - - - - - - - - */
+.carousel-item {
+    transition: ease-in-out;
+}
+
+@media (max-width: 649px) {
+    .carousel {
+        display: none;
+    }
+}
+
+
+
+
 /* - - - - - - - - - - - - - - - - - - PÁGINA: NOVEDADES - - - - - - - - - - - - - - - - - - */
 .novedad--grande {
     width: 60%;
@@ -225,6 +239,34 @@ h4 {
 
 /* - - - - - - - - - - - - - - - - - - PÁGINA: EXPLORAR - - - - - - - - - - - - - - - - - - */
 .recomendacion {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    background-color: var(--claro);
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+    .recomendacion {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.libro__recomendacion {
+    grid-row: 1 / 2;
+}
+
+@media (min-width: 800px) {
+    .libro__recomendacion {
+        grid-column: 2 / 3;
+    }
+}
+
+
+
+
+/* .recomendacion {
     max-width: 100rem;
     margin: 0 auto;
     background-color: var(--claro);
@@ -244,16 +286,12 @@ h4 {
     .recomendacion {
         max-width: 60rem;
     }
-}
+} */
 
 .recomendacion__titulo {
     font-size: 2.8rem;
     font-weight: bold;
     color: #DB2D3B;
-}
-
-.libro__recomendacion {
-    width: 100%;
 }
 
 .justify {
