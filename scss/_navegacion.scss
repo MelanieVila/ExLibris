@@ -1,0 +1,15 @@
+@media (max-width: 576px) {
+    .logo {
+        width: 50%;
+    }
+}
+
+.navegacion__enlace {
+    font-family: $fuentePrincipal;
+    color: $oscuro;
+    font-size: 2.5rem;
+
+    &:hover {
+        color: $principal;
+    }
+}

@@ -1,0 +1,9 @@
+.carousel-item {
+    transition: ease-in-out;
+}
+
+@media (max-width: 649px) {
+    .carousel {
+        display: none;
+    }
+}

@@ -1,0 +1,33 @@
+.novedad--grande {
+    width: 60%;
+    display: block;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .novedad--grande {
+        display: none;
+    }
+}
+
+.novedad--mini {
+    width: 40%;
+    display: block;
+    margin: auto;
+}
+
+@media (min-width: 768px) {
+    .novedad--mini {
+        display: none;
+    }
+}
+
+.libro__descripcion {
+    margin: 0 auto;
+    background-color: $claro;
+}
+
+.libro__generos {
+    font-weight: bold;
+    color: $principalOscuro;
+}

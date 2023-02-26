@@ -1,0 +1,28 @@
+.footer {
+    background-color: #252422;
+
+    h4 {
+        color: $claro;
+    }
+
+    a {
+        color: $principal;
+    }
+}
+
+.footer__logo {
+    display: block;
+}
+
+.footer__redes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__tarjetas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}

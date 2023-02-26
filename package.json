@@ -1,0 +1,27 @@
+{
+  "name": "bookstore",
+  "version": "1.0.0",
+  "description": "Proyecto para el curso Desarrollo Web en la carrera <a href=\"https://www.coderhouse.com/online/carrera-online-desarrollo-fullstack\" target=\"_blank\">Desarrollo Full Stack</a> de Coderhouse (2023).",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass --watch scss:css",
+    "build-css": "node-sass --include-path scss scss/main.scss css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MelanieVila/ExLibris.git"
+  },
+  "author": "MelanieVila",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MelanieVila/ExLibris/issues"
+  },
+  "homepage": "https://github.com/MelanieVila/ExLibris#readme",
+  "keywords": [],
+  "dependencies": {
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.20"
+  }
+}
