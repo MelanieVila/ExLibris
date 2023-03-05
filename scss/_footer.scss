@@ -1,5 +1,11 @@
+@mixin flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .footer {
-    background-color: #252422;
+    background-color: $oscuro;
 
     h4 {
         color: $claro;
@@ -15,14 +21,10 @@
 }
 
 .footer__redes {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexbox;
 }
 
 .footer__tarjetas {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexbox;
     gap: 1rem;
 }

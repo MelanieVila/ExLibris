@@ -1,0 +1,119 @@
+$principal: #6050DC;
+$principalOscuro: #211c88;
+$secundario: #F0F3BD;
+$claro: #fffcf2;
+$oscuro: #252422;
+$formulario: #474544;
+
+$fuentePrincipal: 'Abhaya Libre', serif;
+$fuenteSecundaria: 'Bebas Neue', serif;
+
+$boxShadow: inset 0 -3rem 3rem rgba(0, 0, 0, 0.1), 0 0 0 .2rem $claro, .3rem .3rem 1rem $oscuro;
+
+html {
+    height: 100%;
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: $fuentePrincipal;
+    background-image: url(../img/fondoblanco.jpg);
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: $fuentePrincipal;
+    margin: 1rem auto;
+}
+
+a {
+    text-decoration: none;
+    color: $principalOscuro !important;
+}
+
+footer {
+    margin-top: auto;
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+    margin: 5rem 0 0 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 2.2rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
+h1,
+h3,
+h4 {
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+}
+
+.contenedor {
+    max-width: 100rem;
+    margin: 0 auto;
+    background-color: $claro;
+}
+
+.titulos {
+    display: grid;
+    place-content: center;
+}
+
+.sombra {
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: $boxShadow;
+}
+
+#search-input {
+    height: 4rem;
+    width: 50rem;
+}
+
+#search-button {
+    height: 4rem;
+    width: 7rem;
+}
+
+@media (max-width: 768px) {
+    #search-input {
+        width: 25rem;
+    }
+}
+
+.libro__nombre,
+.libro__precio {
+    color: $principal;
+    font-family: $fuenteSecundaria;
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.libro__nombre {
+    font-size: 2.5rem;
+}
+
+.libro__precio {
+    font-size: 2rem;
+}
+
+.libro__imagen {
+    width: 100%;
+}

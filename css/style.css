@@ -1,402 +1,390 @@
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    height: 100%;
-    font-size: 62.5%;
-    box-sizing: border-box;
+  height: 100%;
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 body {
-    font-size: 1.6rem;
-    font-family: "Abhaya Libre", serif;
-    background-image: url(../img/fondoblanco.jpg);
+  font-size: 1.6rem;
+  font-family: "Abhaya Libre", serif;
+  background-image: url(../img/fondoblanco.jpg);
 }
 
 p {
-    font-size: 1.8rem;
-    font-family: "Abhaya Libre", serif;
-    margin: 1rem auto;
+  font-size: 1.8rem;
+  font-family: "Abhaya Libre", serif;
+  margin: 1rem auto;
 }
 
 a {
-    text-decoration: none;
-    color: #211c88;
+  text-decoration: none;
+  color: #211c88 !important;
 }
 
 footer {
-    margin-top: auto;
+  margin-top: auto;
 }
 
 h1 {
-    font-size: 3.8rem;
+  font-size: 3.8rem;
 }
 
 h2 {
-    font-size: 2.8rem;
-    margin: 5rem 0 0 0;
-    text-align: center;
-    font-weight: bold;
+  font-size: 2.8rem;
+  margin: 5rem 0 0 0;
+  text-align: center;
+  font-weight: bold;
 }
 
 h3 {
-    font-size: 2.2rem;
+  font-size: 2.2rem;
 }
 
 h4 {
-    font-size: 1.4rem;
+  font-size: 1.4rem;
 }
 
 h1,
 h3,
 h4 {
-    text-align: center;
-    margin: 0;
-    font-weight: bold;
+  text-align: center;
+  margin: 0;
+  font-weight: bold;
 }
 
 .contenedor {
-    max-width: 100rem;
-    margin: 0 auto;
-    background-color: #fffcf2;
+  max-width: 100rem;
+  margin: 0 auto;
+  background-color: #fffcf2;
 }
 
 .titulos {
-    display: grid;
-    place-content: center;
+  display: grid;
+  place-content: center;
 }
 
 .sombra {
-    padding: 2rem;
-    border-radius: 1.5rem;
-    box-shadow: inset 0 -3rem 3rem rgba(0, 0, 0, 0.1), 0 0 0 0.2rem #fffcf2, 0.3rem 0.3rem 1rem #252422;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: inset 0 -3rem 3rem rgba(0, 0, 0, 0.1), 0 0 0 0.2rem #fffcf2, 0.3rem 0.3rem 1rem #252422;
 }
 
 #search-input {
-    height: 4rem;
-    width: 50rem;
+  height: 4rem;
+  width: 50rem;
 }
 
 #search-button {
-    height: 4rem;
-    width: 7rem;
+  height: 4rem;
+  width: 7rem;
 }
 
 @media (max-width: 768px) {
-    #search-input {
-        width: 25rem;
-    }
+  #search-input {
+    width: 25rem;
+  }
 }
-
 .libro__nombre,
 .libro__precio {
-    color: #6050DC;
-    font-family: "Bebas Neue", serif;
-    margin: 1rem 0;
-    text-align: center;
-    line-height: 1.2;
+  color: #6050DC;
+  font-family: "Bebas Neue", serif;
+  margin: 1rem 0;
+  text-align: center;
+  line-height: 1.2;
 }
 
 .libro__nombre {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 .libro__precio {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .libro__imagen {
-    width: 100%;
+  width: 100%;
 }
 
 @media (max-width: 576px) {
-    .logo {
-        width: 50%;
-    }
+  .logo {
+    width: 50%;
+  }
 }
-
 .navegacion__enlace {
-    font-family: "Abhaya Libre", serif;
-    color: #252422;
-    font-size: 2.5rem;
+  font-family: "Abhaya Libre", serif;
+  color: #252422;
+  font-size: 2.5rem;
 }
-
 .navegacion__enlace:hover {
-    color: #6050DC;
+  color: #6050DC !important;
 }
 
 .footer {
-    background-color: #252422;
+  background-color: #252422;
 }
-
 .footer h4 {
-    color: #fffcf2;
+  color: #fffcf2;
 }
-
 .footer a {
-    color: #6050DC;
+  color: #6050DC;
 }
 
 .footer__logo {
-    display: block;
+  display: block;
 }
 
 .footer__redes {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer__tarjetas {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .carousel-item {
-    transition: ease-in-out;
+  transition: ease-in-out;
 }
 
 @media (max-width: 649px) {
-    .carousel {
-        display: none;
-    }
+  .carousel {
+    display: none;
+  }
 }
-
 .novedad--grande {
-    width: 60%;
-    display: block;
-    margin: auto;
+  width: 60%;
+  display: block;
+  margin: auto;
 }
 
 @media (max-width: 768px) {
-    .novedad--grande {
-        display: none;
-    }
+  .novedad--grande {
+    display: none;
+  }
 }
-
 .novedad--mini {
-    width: 40%;
-    display: block;
-    margin: auto;
+  width: 40%;
+  display: block;
+  margin: auto;
 }
 
 @media (min-width: 768px) {
-    .novedad--mini {
-        display: none;
-    }
+  .novedad--mini {
+    display: none;
+  }
 }
-
 .libro__descripcion {
-    margin: 0 auto;
-    background-color: #fffcf2;
+  margin: 0 auto;
+  background-color: #fffcf2;
 }
 
 .libro__generos {
-    font-weight: bold;
-    color: #211c88;
+  font-weight: bold;
+  color: #211c88;
 }
 
 .recomendacion {
-    display: grid;
-    grid-template-rows: repeat(2, auto);
-    background-color: #fffcf2;
-    max-width: 100rem;
-    margin: 0 auto;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  background-color: #fffcf2;
+  max-width: 100rem;
+  margin: 0 auto;
 }
 
 @media (min-width: 800px) {
-    .recomendacion {
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 2rem;
-    }
+  .recomendacion {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
 }
-
 .libro__recomendacion {
-    grid-row: 1 / 2;
+  grid-row: 1/2;
 }
 
 @media (min-width: 800px) {
-    .libro__recomendacion {
-        grid-column: 2 / 3;
-    }
+  .libro__recomendacion {
+    grid-column: 2/3;
+  }
 }
-
 .recomendacion__titulo {
-    font-size: 2.8rem;
-    font-weight: bold;
-    color: #DB2D3B;
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #DB2D3B;
 }
 
 .justify {
-    text-align: justify;
+  text-align: justify;
 }
 
 .quote {
-    width: 2%;
+  width: 2%;
 }
 
 .quote__texto {
-    font-size: 2.2rem;
-    font-family: "Bebas Neue", serif;
+  font-size: 2.2rem;
+  font-family: "Bebas Neue", serif;
 }
 
 .generos__tabla {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #fffcf2;
-    border-radius: 1rem;
-    max-width: 90rem;
-    margin: 1rem auto 4rem auto;
-    justify-content: center;
-    border-radius: 1.5rem;
-    box-shadow: inset 0 -3rem 3rem rgba(0, 0, 0, 0.1), 0 0 0 0.2rem #fffcf2, 0.3rem 0.3rem 1rem #252422;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fffcf2;
+  border-radius: 1rem;
+  max-width: 90rem;
+  margin: 1rem auto 4rem auto;
+  justify-content: center;
+  border-radius: 1.5rem;
+  box-shadow: inset 0 -3rem 3rem rgba(0, 0, 0, 0.1), 0 0 0 0.2rem #fffcf2, 0.3rem 0.3rem 1rem #252422;
 }
-
 .generos__tabla a {
-    padding: 1rem;
-    text-align: center;
+  padding: 1rem;
+  text-align: center;
 }
 
 .contenedor__nosotros {
-    max-width: 120rem;
-    margin: 5rem auto;
-    background-color: #fffcf2;
+  max-width: 120rem;
+  margin: 5rem auto;
+  background-color: #fffcf2;
 }
 
 .nosotros {
-    display: grid;
-    grid-template-rows: repeat(2, auto);
+  display: grid;
+  grid-template-rows: repeat(2, auto);
 }
 
 @media (min-width: 800px) {
-    .nosotros {
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 2rem;
-    }
+  .nosotros {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
 }
-
 .nosotros__imagen {
-    grid-row: 1 / 2;
-    width: 100%;
+  grid-row: 1/2;
+  width: 100%;
 }
 
 @media (min-width: 800px) {
-    .nosotros__imagen {
-        grid-column: 2 / 3;
-    }
+  .nosotros__imagen {
+    grid-column: 2/3;
+  }
 }
-
 .seccion__nosotros {
-    font-size: 2.8rem;
-    font-weight: bold;
+  font-size: 2.8rem;
+  font-weight: bold;
 }
 
 .justify {
-    text-align: justify;
+  text-align: justify;
 }
 
 .row .text-center {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
 .ubicacion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 input,
 textarea {
-    font-family: "Bebas Neue", serif;
-    margin: 0;
+  font-family: "Bebas Neue", serif;
+  margin: 0;
 }
 
-input[type='text'],
-[type='email'],
+input[type=text],
+[type=email],
 textarea {
-    background: none;
-    border: none;
-    border-bottom: solid 0.2rem #474544;
-    color: #474544;
-    font-size: 2rem;
-    font-weight: 400;
-    letter-spacing: .1rem;
-    margin: 0 0 3rem 0;
-    padding: 0 0 1rem 0;
-    text-transform: uppercase;
-    width: 100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+  background: none;
+  border: none;
+  border-bottom: solid 0.2rem #474544;
+  color: #474544;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  margin: 0 0 3rem 0;
+  padding: 0 0 1rem 0;
+  text-transform: uppercase;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 fieldset {
-    border: none;
+  border: none;
 }
 
 #formulario {
-    margin: 2rem auto 4rem auto;
+  margin: 2rem auto 4rem auto;
 }
 
-input[type='text']:focus,
-[type='email']:focus,
+input[type=text]:focus,
+[type=email]:focus,
 textarea:focus {
-    outline: none;
-    padding: 0 0 1rem 0;
+  outline: none;
+  padding: 0 0 1rem 0;
 }
 
 textarea {
-    line-height: 150%;
-    height: 15rem;
-    width: 100%;
-    resize: none;
+  line-height: 150%;
+  height: 15rem;
+  width: 100%;
+  resize: none;
 }
 
 #boton {
-    background: none;
-    border: solid 0.2rem #474544;
-    color: #474544;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 2rem;
-    letter-spacing: .1rem;
-    padding: 2rem 3.5rem;
-    text-transform: uppercase;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+  background: none;
+  border: solid 0.2rem #474544;
+  color: #474544;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  padding: 2rem 3.5rem;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
-
 #boton:hover {
-    background: #474544;
-    color: #fffcf2;
+  background: #474544;
+  color: #fffcf2;
 }
 
 .alinear-boton {
-    display: grid;
+  display: grid;
 }
 
 @media (min-width: 768px) {
-    .alinear-boton {
-        place-content: center;
-    }
+  .alinear-boton {
+    place-content: center;
+  }
 }
+
+/*# sourceMappingURL=style.css.map */
