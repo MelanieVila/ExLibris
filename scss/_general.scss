@@ -10,6 +10,14 @@ $fuenteSecundaria: 'Bebas Neue', serif;
 
 $boxShadow: inset 0 -3rem 3rem rgba(0, 0, 0, 0.1), 0 0 0 .2rem $claro, .3rem .3rem 1rem $oscuro;
 
+@mixin flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+////////////////////////////////////////////////////////
+
 html {
     height: 100%;
     font-size: 62.5%;
@@ -30,7 +38,7 @@ p {
 
 a {
     text-decoration: none;
-    color: $principalOscuro !important;
+    color: $principalOscuro;
 }
 
 footer {

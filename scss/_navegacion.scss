@@ -1,3 +1,7 @@
+.logo {
+    max-width: 75%;
+}
+
 @media (max-width: 576px) {
     .logo {
         width: 50%;
@@ -10,6 +14,6 @@
     font-size: 2.5rem;
 
     &:hover {
-        color: $principal !important;
+        color: $principal;
     }
 }

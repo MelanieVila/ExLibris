@@ -29,7 +29,7 @@ p {
 
 a {
   text-decoration: none;
-  color: #211c88 !important;
+  color: #211c88;
 }
 
 footer {
@@ -95,6 +95,7 @@ h4 {
     width: 25rem;
   }
 }
+
 .libro__nombre,
 .libro__precio {
   color: #6050DC;
@@ -116,26 +117,34 @@ h4 {
   width: 100%;
 }
 
+.logo {
+  max-width: 75%;
+}
+
 @media (max-width: 576px) {
   .logo {
     width: 50%;
   }
 }
+
 .navegacion__enlace {
   font-family: "Abhaya Libre", serif;
   color: #252422;
   font-size: 2.5rem;
 }
+
 .navegacion__enlace:hover {
-  color: #6050DC !important;
+  color: #6050DC;
 }
 
 .footer {
   background-color: #252422;
 }
+
 .footer h4 {
   color: #fffcf2;
 }
+
 .footer a {
   color: #6050DC;
 }
@@ -166,6 +175,46 @@ h4 {
     display: none;
   }
 }
+
+.novedades {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.novedad__libro {
+  max-width: 40rem;
+}
+
+@media (max-width: 992px) {
+  .novedades {
+    flex-direction: column;
+  }
+}
+
+.libro__imagen {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.libro__imagen:hover {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.libro__descripcion {
+  margin: 0 auto;
+  background-color: #fffcf2;
+}
+
+.libro__generos {
+  font-weight: bold;
+  color: #211c88;
+}
+
 .novedad--grande {
   width: 60%;
   display: block;
@@ -177,6 +226,7 @@ h4 {
     display: none;
   }
 }
+
 .novedad--mini {
   width: 40%;
   display: block;
@@ -187,15 +237,6 @@ h4 {
   .novedad--mini {
     display: none;
   }
-}
-.libro__descripcion {
-  margin: 0 auto;
-  background-color: #fffcf2;
-}
-
-.libro__generos {
-  font-weight: bold;
-  color: #211c88;
 }
 
 .recomendacion {
@@ -212,6 +253,7 @@ h4 {
     column-gap: 2rem;
   }
 }
+
 .libro__recomendacion {
   grid-row: 1/2;
 }
@@ -221,6 +263,7 @@ h4 {
     grid-column: 2/3;
   }
 }
+
 .recomendacion__titulo {
   font-size: 2.8rem;
   font-weight: bold;
@@ -251,6 +294,7 @@ h4 {
   border-radius: 1.5rem;
   box-shadow: inset 0 -3rem 3rem rgba(0, 0, 0, 0.1), 0 0 0 0.2rem #fffcf2, 0.3rem 0.3rem 1rem #252422;
 }
+
 .generos__tabla a {
   padding: 1rem;
   text-align: center;
@@ -273,6 +317,7 @@ h4 {
     column-gap: 2rem;
   }
 }
+
 .nosotros__imagen {
   grid-row: 1/2;
   width: 100%;
@@ -283,6 +328,7 @@ h4 {
     grid-column: 2/3;
   }
 }
+
 .seccion__nosotros {
   font-size: 2.8rem;
   font-weight: bold;
@@ -360,7 +406,6 @@ textarea {
   background: none;
   border: solid 0.2rem #474544;
   color: #474544;
-  cursor: pointer;
   display: inline-block;
   font-size: 2rem;
   letter-spacing: 0.1rem;
@@ -372,6 +417,7 @@ textarea {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
+
 #boton:hover {
   background: #474544;
   color: #fffcf2;

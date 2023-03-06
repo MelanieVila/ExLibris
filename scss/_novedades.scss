@@ -1,3 +1,40 @@
+.novedades {
+    @include flexbox;
+    gap: 3rem;
+}
+
+.novedad__libro {
+    max-width: 40rem;
+}
+
+@media (max-width: 992px) {
+    .novedades {
+        flex-direction: column;
+    }
+}
+
+.libro__imagen {
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.libro__imagen:hover {
+    -webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+.libro__descripcion {
+    margin: 0 auto;
+    background-color: $claro;
+}
+
+.libro__generos {
+    font-weight: bold;
+    color: $principalOscuro;
+}
+
 .novedad--grande {
     width: 60%;
     display: block;
@@ -20,14 +57,4 @@
     .novedad--mini {
         display: none;
     }
-}
-
-.libro__descripcion {
-    margin: 0 auto;
-    background-color: $claro;
-}
-
-.libro__generos {
-    font-weight: bold;
-    color: $principalOscuro;
 }
