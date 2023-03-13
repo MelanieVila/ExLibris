@@ -36,15 +36,26 @@ footer {
   margin-top: auto;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+  margin: 0;
+  font-weight: bold;
+}
+
 h1 {
   font-size: 3.8rem;
+}
+
+#h1__margin {
+  margin: 5rem 0 2rem 0;
 }
 
 h2 {
   font-size: 2.8rem;
   margin: 5rem 0 0 0;
-  text-align: center;
-  font-weight: bold;
 }
 
 h3 {
@@ -53,14 +64,6 @@ h3 {
 
 h4 {
   font-size: 1.4rem;
-}
-
-h1,
-h3,
-h4 {
-  text-align: center;
-  margin: 0;
-  font-weight: bold;
 }
 
 .contenedor {
@@ -98,7 +101,7 @@ h4 {
 
 .libro__nombre,
 .libro__precio {
-  color: #6050DC;
+  color: #503fca;
   font-family: "Bebas Neue", serif;
   margin: 1rem 0;
   text-align: center;
@@ -134,7 +137,7 @@ h4 {
 }
 
 .navegacion__enlace:hover {
-  color: #6050DC;
+  color: #503fca;
 }
 
 .footer {
@@ -146,7 +149,7 @@ h4 {
 }
 
 .footer a {
-  color: #6050DC;
+  color: #503fca;
 }
 
 .footer__redes {
@@ -170,6 +173,11 @@ h4 {
   .carousel {
     display: none;
   }
+}
+
+.titulo__tienda {
+  color: #211c88;
+  letter-spacing: 0.2rem;
 }
 
 .novedades {
@@ -216,7 +224,7 @@ h4 {
   margin: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   .novedad--grande {
     display: none;
   }
@@ -228,7 +236,7 @@ h4 {
   margin: auto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 770px) {
   .novedad--mini {
     display: none;
   }
@@ -419,5 +427,3 @@ textarea {
     place-content: center;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
