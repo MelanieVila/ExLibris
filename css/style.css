@@ -149,10 +149,6 @@ h4 {
   color: #6050DC;
 }
 
-.footer__logo {
-  display: block;
-}
-
 .footer__redes {
   display: flex;
   align-items: center;
@@ -193,20 +189,19 @@ h4 {
   }
 }
 
-.libro__imagen {
+.animacion {
   -webkit-transform: scale(1);
   transform: scale(1);
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
-.libro__imagen:hover {
+.animacion:hover {
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
 }
 
 .libro__descripcion {
-  margin: 0 auto;
   background-color: #fffcf2;
 }
 
@@ -244,13 +239,11 @@ h4 {
   grid-template-rows: repeat(2, auto);
   background-color: #fffcf2;
   max-width: 100rem;
-  margin: 0 auto;
 }
 
 @media (min-width: 800px) {
   .recomendacion {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 2rem;
   }
 }
 
@@ -286,11 +279,11 @@ h4 {
 .generos__tabla {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   background-color: #fffcf2;
   border-radius: 1rem;
   max-width: 90rem;
   margin: 1rem auto 4rem auto;
-  justify-content: center;
   border-radius: 1.5rem;
   box-shadow: inset 0 -3rem 3rem rgba(0, 0, 0, 0.1), 0 0 0 0.2rem #fffcf2, 0.3rem 0.3rem 1rem #252422;
 }
@@ -380,10 +373,6 @@ textarea {
   transition: all 0.3s;
 }
 
-fieldset {
-  border: none;
-}
-
 #formulario {
   margin: 2rem auto 4rem auto;
 }
@@ -406,11 +395,9 @@ textarea {
   background: none;
   border: solid 0.2rem #474544;
   color: #474544;
-  display: inline-block;
   font-size: 2rem;
   letter-spacing: 0.1rem;
   padding: 2rem 3.5rem;
-  text-transform: uppercase;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;

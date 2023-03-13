@@ -3,13 +3,11 @@
     grid-template-rows: repeat(2, auto);
     background-color: $claro;
     max-width: 100rem;
-    margin: 0 auto;
 }
 
 @media (min-width: 800px) {
     .recomendacion {
         grid-template-columns: repeat(2, 1fr);
-        column-gap: 2rem;
     }
 }
 
@@ -45,11 +43,11 @@
 .generos__tabla {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     background-color: $claro;
     border-radius: 1rem;
     max-width: 90rem;
     margin: 1rem auto 4rem auto;
-    justify-content: center;
     border-radius: 1.5rem;
     box-shadow: $boxShadow;
 

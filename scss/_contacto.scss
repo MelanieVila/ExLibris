@@ -1,3 +1,11 @@
+@mixin transition {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
 input,
 textarea {
     font-family: $fuenteSecundaria;
@@ -23,15 +31,7 @@ textarea {
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
     box-sizing: border-box;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-fieldset {
-    border: none;
+    @include transition;
 }
 
 #formulario {
@@ -56,16 +56,10 @@ textarea {
     background: none;
     border: solid .2rem $formulario;
     color: $formulario;
-    display: inline-block;
     font-size: 2rem;
     letter-spacing: .1rem;
     padding: 2rem 3.5rem;
-    text-transform: uppercase;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+    @include transition;
 
     &:hover {
         background: $formulario;
