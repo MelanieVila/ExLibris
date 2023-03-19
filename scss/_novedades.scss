@@ -1,12 +1,6 @@
 .novedades {
     @include flexbox;
     gap: 3rem;
-
-    @media (max-width: 992px) {
-        .novedades {
-            flex-direction: column;
-        }
-    }
     
     .novedad__libro {
         max-width: 40rem;
@@ -34,6 +28,12 @@
     }
 }
 
+@media (max-width: 992px) {
+    .novedades {
+        flex-direction: column;
+    }
+}
+
 .novedad--grande {
     width: 60%;
     display: block;
@@ -47,7 +47,7 @@
 }
 
 .novedad--mini {
-    width: 40%;
+    width: 50%;
     display: block;
     margin: auto;
 }
