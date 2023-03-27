@@ -27,7 +27,7 @@ html {
 body {
     font-size: 1.8rem;
     font-family: $fuentePrincipal;
-    background-image: url(../img/fondoblanco.jpg);
+    background-image: url("../img/fondoblanco.jpg");
 }
 
 p {
@@ -58,7 +58,7 @@ h1 {
     font-size: 3.6rem;
 }
 
-#h1__margin {
+.h1__margin {
     margin: 5rem 0 2rem 0;
 }
 
@@ -92,12 +92,12 @@ h4 {
     box-shadow: $boxShadow;
 }
 
-#search-input {
+.search-input {
     height: 4rem;
     width: 50rem;
 }
 
-#search-button {
+.search-button {
     height: 4rem;
     width: 7rem;
 }

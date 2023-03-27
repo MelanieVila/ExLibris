@@ -34,7 +34,7 @@ textarea {
     @include transition;
 }
 
-#formulario {
+.formulario {
     margin: 2rem auto 4rem auto;
 }
 
@@ -52,7 +52,7 @@ textarea {
     resize: none;
 }
 
-#boton {
+.boton {
     background: none;
     border: solid .2rem $formulario;
     color: $formulario;

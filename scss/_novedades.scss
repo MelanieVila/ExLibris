@@ -7,27 +7,27 @@
 .novedades {
     @include flexbox;
     gap: 3rem;
-    
+
     .novedad__libro {
         max-width: 40rem;
     }
-    
+
     .animacion {
         -webkit-transform: scale(1);
         transform: scale(1);
         -webkit-transition: .3s ease-in-out;
         transition: .3s ease-in-out;
     }
-    
+
     .animacion:hover {
         -webkit-transform: scale(1.3);
         transform: scale(1.3);
     }
-    
+
     .libro__descripcion {
         background-color: $claro;
     }
-    
+
     .libro__generos {
         font-weight: bold;
         color: $principalOscuro;
