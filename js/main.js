@@ -1,3 +1,6 @@
+const indexNovedades = document.getElementById("index__novedades");
+const indexExplorar = document.getElementById("index__vendidos");
+
 const libros = [
     {
         id: "001",
@@ -215,4 +218,40 @@ const libros = [
         precio: 1550,
         img: "../img/WAT.png"
     }
-]
+];
+
+let carrito = [];
+
+let seleccionSeisNovedades = [23, 22, 5, 11, 3, 1];
+let indexSeisNovedades = seleccionSeisNovedades.map((indice) => libros[indice]);
+
+indexSeisNovedades.forEach((libro) => {
+    let content = document.getElementById("index__novedades");
+    let libroElement = document.createElement("div");
+    libroElement.setAttribute("class", "col-sm-6 col-lg-4");
+    libroElement.innerHTML = `
+        <a href="index.html">
+            <img src="${libro.img}" class="libro__imagen" alt="${libro.titulo}">
+            <p class="libro__nombre">${libro.titulo}</p>
+        </a>
+        <p class="libro__precio">$${libro.precio}</p>
+    `;
+    content.appendChild(libroElement);
+});
+
+let seleccionSeisVendidos = [6, 21, 17, 9, 4, 20];
+let indexSeisVendidos = seleccionSeisVendidos.map((indice) => libros[indice]);
+
+indexSeisVendidos.forEach((libro) => {
+    let content = document.getElementById("index__vendidos");
+    let libroElement = document.createElement("div");
+    libroElement.setAttribute("class", "col-sm-6 col-lg-4");
+    libroElement.innerHTML = `
+        <a href="index.html">
+            <img src="${libro.img}" class="libro__imagen" alt="${libro.titulo}">
+            <p class="libro__nombre">${libro.titulo}</p>
+        </a>
+        <p class="libro__precio">$${libro.precio}</p>
+    `;
+    content.appendChild(libroElement);
+});
