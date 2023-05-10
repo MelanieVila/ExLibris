@@ -1,0 +1,89 @@
+.container-icon {
+    position: relative;
+}
+
+.count-products {
+    position: absolute;
+    top: 55%;
+    right: 0;
+    background-color: $oscuro;
+    color: $claro;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    @include flexbox;
+}
+
+#contador-productos {
+    font-size: 1.2rem;
+}
+
+.container-cart-products {
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    background-color: $claro;
+    width: 40rem;
+    z-index: 1;
+    box-shadow: 0 1rem 2rem $formulario;
+    border-radius: 1rem;
+}
+
+.cart-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+    border-bottom: .1rem solid $formulario;
+}
+
+.info-cart-product {
+    display: flex;
+    justify-content: space-between;
+    flex: 0.8;
+}
+
+.titulo-producto-carrito {
+    font-size: 2rem;
+}
+
+.precio-producto-carrito {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.cantidad-producto-carrito {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.icon-close {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.icon-close:hover {
+    stroke: red;
+    cursor: pointer;
+}
+
+.cart-total {
+    @include flexbox;
+    padding: 2rem 0;
+    gap: 2rem;
+}
+
+.cart-total h3 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.total-pagar {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.hidden-cart {
+    display: none;
+}

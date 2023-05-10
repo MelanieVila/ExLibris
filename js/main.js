@@ -1,5 +1,4 @@
-const indexNovedades = document.getElementById("index__novedades");
-const indexExplorar = document.getElementById("index__vendidos");
+// CATÁLOGO DE LIBROS
 
 const libros = [
     {
@@ -8,7 +7,7 @@ const libros = [
         autor: "Orwell, George",
         genero: "Clásico",
         precio: 1250,
-        img: "../img/AF.png"
+        img: "./img/AF.png"
     },
     {
         id: "002",
@@ -16,7 +15,7 @@ const libros = [
         autor: "Martin, George R.R.",
         genero: "Fantasía",
         precio: 1750,
-        img: "../img/AGOT.png"
+        img: "./img/AGOT.png"
     },
     {
         id: "003",
@@ -24,7 +23,7 @@ const libros = [
         autor: "Christie, Agatha",
         genero: "Misterio",
         precio: 1300,
-        img: "../img/ATTWN.png"
+        img: "./img/ATTWN.png"
     },
     {
         id: "004",
@@ -32,7 +31,7 @@ const libros = [
         autor: "Bradbury, Ray",
         genero: "Ciencia Ficción",
         precio: 1250,
-        img: "../img/F451.png"
+        img: "./img/F451.png"
     },
     {
         id: "005",
@@ -40,7 +39,7 @@ const libros = [
         autor: "Shelley, Mary",
         genero: "Clásico",
         precio: 1400,
-        img: "../img/FRA.png"
+        img: "./img/FRA.png"
     },
     {
         id: "006",
@@ -48,7 +47,7 @@ const libros = [
         autor: "Murakami, Haruki",
         genero: "Fantasía",
         precio: 1400,
-        img: "../img/HM1Q84.png"
+        img: "./img/HM1Q84.png"
     },
     {
         id: "007",
@@ -56,7 +55,7 @@ const libros = [
         autor: "Rowling, J.K.",
         genero: "Fantasía",
         precio: 1650,
-        img: "../img/HPATPS.png"
+        img: "./img/HPATPS.png"
     },
     {
         id: "008",
@@ -64,7 +63,7 @@ const libros = [
         autor: "Bronte, Charlotte",
         genero: "Clásico",
         precio: 1350,
-        img: "../img/JE.png"
+        img: "./img/JE.png"
     },
     {
         id: "009",
@@ -72,7 +71,7 @@ const libros = [
         autor: "Golding, William",
         genero: "Clásico",
         precio: 1300,
-        img: "../img/LOTF.png"
+        img: "./img/LOTF.png"
     },
     {
         id: "010",
@@ -80,7 +79,7 @@ const libros = [
         autor: "May Alcott, Louisa",
         genero: "Clásico",
         precio: 1300,
-        img: "../img/LW.png"
+        img: "./img/LW.png"
     },
     {
         id: "011",
@@ -88,7 +87,7 @@ const libros = [
         autor: "Kaur, Rupi",
         genero: "Poesía",
         precio: 1400,
-        img: "../img/MAH.png"
+        img: "./img/MAH.png"
     },
     {
         id: "012",
@@ -96,7 +95,7 @@ const libros = [
         autor: "Dahl, Roald",
         genero: "Infantil",
         precio: 1350,
-        img: "../img/MAT.png"
+        img: "./img/MAT.png"
     },
     {
         id: "013",
@@ -104,7 +103,7 @@ const libros = [
         autor: "Riordan, Rick",
         genero: "Juvenil",
         precio: 1550,
-        img: "../img/PJTLT.png"
+        img: "./img/PJTLT.png"
     },
     {
         id: "014",
@@ -112,7 +111,7 @@ const libros = [
         autor: "Zusak, Markus",
         genero: "Histórico",
         precio: 1400,
-        img: "../img/TBT.png"
+        img: "./img/TBT.png"
     },
     {
         id: "015",
@@ -120,7 +119,7 @@ const libros = [
         autor: "Salinger, J.D.",
         genero: "Clásico",
         precio: 1350,
-        img: "../img/TCITR.png"
+        img: "./img/TCITR.png"
     },
     {
         id: "016",
@@ -128,7 +127,7 @@ const libros = [
         autor: "Williams, Pip",
         genero: "Histórico",
         precio: 1500,
-        img: "../img/TDOLW.png"
+        img: "./img/TDOLW.png"
     },
     {
         id: "017",
@@ -136,7 +135,7 @@ const libros = [
         autor: "Tolkien, J.R.R.",
         genero: "Fantasía",
         precio: 1650,
-        img: "../img/TDOTR.png"
+        img: "./img/TDOTR.png"
     },
     {
         id: "018",
@@ -144,7 +143,7 @@ const libros = [
         autor: "Fitzgerald, F. Scott",
         genero: "Clásico",
         precio: 1250,
-        img: "../img/TGG.png"
+        img: "./img/TGG.png"
     },
     {
         id: "019",
@@ -152,7 +151,7 @@ const libros = [
         autor: "Collins, Suzanne",
         genero: "Juvenil",
         precio: 1450,
-        img: "../img/THG.png"
+        img: "./img/THG.png"
     },
     {
         id: "020",
@@ -160,7 +159,7 @@ const libros = [
         autor: "Atwood, Margaret",
         genero: "Ciencia Ficción",
         precio: 1600,
-        img: "../img/THT.png"
+        img: "./img/THT.png"
     },
     {
         id: "021",
@@ -168,7 +167,7 @@ const libros = [
         autor: "Lee, Harper",
         genero: "Clásico",
         precio: 1400,
-        img: "../img/TKAM.png"
+        img: "./img/TKAM.png"
     },
     {
         id: "022",
@@ -176,7 +175,7 @@ const libros = [
         autor: "De Saint-Exupéry, Antoine",
         genero: "Clásico",
         precio: 1350,
-        img: "../img/TLP.png"
+        img: "./img/TLP.png"
     },
     {
         id: "023",
@@ -184,7 +183,7 @@ const libros = [
         autor: "Benedict, Marie",
         genero: "Histórico",
         precio: 1500,
-        img: "../img/TPL.png"
+        img: "./img/TPL.png"
     },
     {
         id: "024",
@@ -192,7 +191,7 @@ const libros = [
         autor: "Chbosky, Stephen",
         genero: "Juvenil",
         precio: 1450,
-        img: "../img/TPOBAW.png"
+        img: "./img/TPOBAW.png"
     },
     {
         id: "025",
@@ -200,7 +199,7 @@ const libros = [
         autor: "Wilde, Oscar",
         genero: "Clásico",
         precio: 1400,
-        img: "../img/TPODG.png"
+        img: "./img/TPODG.png"
     },
     {
         id: "026",
@@ -208,7 +207,7 @@ const libros = [
         autor: "King, Stephen",
         genero: "Terror",
         precio: 1650,
-        img: "../img/TS.png"
+        img: "./img/TS.png"
     },
     {
         id: "027",
@@ -216,42 +215,60 @@ const libros = [
         autor: "Steel, Danielle",
         genero: "Romance",
         precio: 1550,
-        img: "../img/WAT.png"
+        img: "./img/WAT.png"
     }
 ];
 
-let carrito = [];
+// INDEX - DOM
 
-let seleccionSeisNovedades = [23, 22, 5, 11, 3, 1];
-let indexSeisNovedades = seleccionSeisNovedades.map((indice) => libros[indice]);
+const indexNovedades = document.querySelector("#index__novedades");
+const indexVendidos = document.querySelector("#index__vendidos");
+const carritoAgregar = document.querySelector(".agregar__carrito");
+
+let seleccionSeisNovedades = [23, 22, 5, 11, 3, 1]; // selección personalizada de libros
+let indexSeisNovedades = seleccionSeisNovedades.map((catalogo) => libros[catalogo]);
 
 indexSeisNovedades.forEach((libro) => {
-    let content = document.getElementById("index__novedades");
-    let libroElement = document.createElement("div");
-    libroElement.setAttribute("class", "col-sm-6 col-lg-4");
-    libroElement.innerHTML = `
+    let librosElegidos = document.createElement("div");
+    librosElegidos.setAttribute("class", "col-sm-6 col-lg-4"); // agrego un div respetando Bootstrap
+    librosElegidos.innerHTML = `
         <a href="index.html">
             <img src="${libro.img}" class="libro__imagen" alt="${libro.titulo}">
             <p class="libro__nombre">${libro.titulo}</p>
         </a>
         <p class="libro__precio">$${libro.precio}</p>
+
+        <div class="alinear-boton">
+            <button class="boton d-inline-block text-uppercase agregar__carrito" id="${libro.id}">Comprar</button>
+        </div>
     `;
-    content.appendChild(libroElement);
+    indexNovedades.append(librosElegidos);
 });
 
-let seleccionSeisVendidos = [6, 21, 17, 9, 4, 20];
-let indexSeisVendidos = seleccionSeisVendidos.map((indice) => libros[indice]);
+let seleccionSeisVendidos = [6, 21, 17, 9, 4, 20]; // selección personalizada de libros
+let indexSeisVendidos = seleccionSeisVendidos.map((catalogo) => libros[catalogo]);
 
 indexSeisVendidos.forEach((libro) => {
-    let content = document.getElementById("index__vendidos");
-    let libroElement = document.createElement("div");
-    libroElement.setAttribute("class", "col-sm-6 col-lg-4");
-    libroElement.innerHTML = `
+    let librosElegidos = document.createElement("div");
+    librosElegidos.setAttribute("class", "col-sm-6 col-lg-4"); // agrego un div respetando Bootstrap
+    librosElegidos.innerHTML = `
         <a href="index.html">
             <img src="${libro.img}" class="libro__imagen" alt="${libro.titulo}">
             <p class="libro__nombre">${libro.titulo}</p>
         </a>
         <p class="libro__precio">$${libro.precio}</p>
+
+        <div class="alinear-boton">
+            <button class="boton d-inline-block text-uppercase agregar__carrito" id="${libro.id}">Comprar</button>
+        </div>
     `;
-    content.appendChild(libroElement);
+    indexVendidos.append(librosElegidos);
 });
+
+// Carrito
+
+let carrito = [];
+
+function agregarCarrito() {
+    carritoAgregar = document.querySelectorAll(".agregar__carrito");
+}

@@ -98,7 +98,6 @@ h4 {
     width: 25rem;
   }
 }
-
 .libro__nombre,
 .libro__precio {
   color: #503fca;
@@ -129,35 +128,123 @@ h4 {
     width: 50%;
   }
 }
-
 .navegacion__enlace {
   font-family: "Abhaya Libre", serif;
   color: #252422;
   font-size: 2.5rem;
 }
-
 .navegacion__enlace:hover {
   color: #503fca;
 }
 
-.footer {
+.container-icon {
+  position: relative;
+}
+
+.count-products {
+  position: absolute;
+  top: 55%;
+  right: 0;
   background-color: #252422;
-}
-
-.footer h4 {
   color: #fffcf2;
-}
-
-.footer a {
-  color: #503fca;
-}
-
-.footer .footer__redes {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+#contador-productos {
+  font-size: 1.2rem;
+}
+
+.container-cart-products {
+  position: absolute;
+  top: 5rem;
+  right: 0;
+  background-color: #fffcf2;
+  width: 40rem;
+  z-index: 1;
+  box-shadow: 0 1rem 2rem #474544;
+  border-radius: 1rem;
+}
+
+.cart-product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem;
+  border-bottom: 0.1rem solid #474544;
+}
+
+.info-cart-product {
+  display: flex;
+  justify-content: space-between;
+  flex: 0.8;
+}
+
+.titulo-producto-carrito {
+  font-size: 2rem;
+}
+
+.precio-producto-carrito {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+.cantidad-producto-carrito {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.icon-close {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.icon-close:hover {
+  stroke: red;
+  cursor: pointer;
+}
+
+.cart-total {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  gap: 2rem;
+}
+
+.cart-total h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.total-pagar {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.hidden-cart {
+  display: none;
+}
+
+.footer {
+  background-color: #252422;
+}
+.footer h4 {
+  color: #fffcf2;
+}
+.footer a {
+  color: #503fca;
+}
+.footer .footer__redes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .footer .footer__tarjetas {
   display: flex;
   align-items: center;
@@ -174,7 +261,6 @@ h4 {
     display: none;
   }
 }
-
 .titulo__tienda {
   color: #211c88;
   letter-spacing: 0.2rem;
@@ -185,34 +271,28 @@ h4 {
     flex-direction: column;
   }
 }
-
 .novedades {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 3rem;
 }
-
 .novedades .novedad__libro {
   max-width: 40rem;
 }
-
 .novedades .animacion {
   -webkit-transform: scale(1);
   transform: scale(1);
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
-
 .novedades .animacion:hover {
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
 }
-
 .novedades .libro__descripcion {
   background-color: #fffcf2;
 }
-
 .novedades .libro__generos {
   font-weight: bold;
   color: #211c88;
@@ -229,7 +309,6 @@ h4 {
     display: none;
   }
 }
-
 .novedad--mini {
   width: 50%;
   display: block;
@@ -241,7 +320,6 @@ h4 {
     display: none;
   }
 }
-
 .recomendacion {
   display: grid;
   grid-template-rows: repeat(2, auto);
@@ -254,7 +332,6 @@ h4 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 .libro__recomendacion {
   grid-row: 1/2;
 }
@@ -264,7 +341,6 @@ h4 {
     grid-column: 2/3;
   }
 }
-
 .recomendacion__titulo {
   font-size: 2.8rem;
   font-weight: bold;
@@ -295,7 +371,6 @@ h4 {
   border-radius: 1.5rem;
   box-shadow: inset 0 -3rem 3rem rgba(0, 0, 0, 0.1), 0 0 0 0.2rem #fffcf2, 0.3rem 0.3rem 1rem #252422;
 }
-
 .generos__tabla a {
   padding: 1rem;
   text-align: center;
@@ -318,7 +393,6 @@ h4 {
     column-gap: 2rem;
   }
 }
-
 .nosotros__imagen {
   grid-row: 1/2;
   width: 100%;
@@ -329,7 +403,6 @@ h4 {
     grid-column: 2/3;
   }
 }
-
 .seccion__nosotros {
   font-size: 2.8rem;
   font-weight: bold;
@@ -408,7 +481,6 @@ textarea {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-
 .boton:hover {
   background: #474544;
   color: #fffcf2;
