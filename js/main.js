@@ -1,3 +1,18 @@
+// Libros
+const indexNovedades = document.querySelector("#index__novedades");
+const indexVendidos = document.querySelector("#index__vendidos");
+
+// Carrito
+const carritoAgregar = document.querySelector(".agregar__carrito");
+const carritoBoton = document.querySelector(".carrito__icono--contenedor");
+const carritoNumero = document.querySelector(".carrito__cantidad--numero");
+const carritoLibros = document.querySelector(".carrito__libros");
+const carritoContainer = document.querySelector(".carrito__container");
+const carritoProductos = document.querySelector(".carrito__productos");
+const carritoTotal = document.querySelector(".carrito__total");
+const carritoPago = document.querySelector(".carrito__pago");
+const carritoVacio = document.querySelector(".carrito__vacio");
+
 // CATÁLOGO DE LIBROS
 
 const libros = [
@@ -219,11 +234,7 @@ const libros = [
     }
 ];
 
-// INDEX - DOM
-
-const indexNovedades = document.querySelector("#index__novedades");
-const indexVendidos = document.querySelector("#index__vendidos");
-const carritoAgregar = document.querySelector(".agregar__carrito");
+// Index
 
 let seleccionSeisNovedades = [23, 22, 5, 11, 3, 1]; // selección personalizada de libros
 let indexSeisNovedades = seleccionSeisNovedades.map((catalogo) => libros[catalogo]);
@@ -268,7 +279,3 @@ indexSeisVendidos.forEach((libro) => {
 // Carrito
 
 let carrito = [];
-
-function agregarCarrito() {
-    carritoAgregar = document.querySelectorAll(".agregar__carrito");
-}
