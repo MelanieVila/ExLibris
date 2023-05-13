@@ -6,7 +6,7 @@
     position: absolute;
     top: 55%;
     right: 0;
-    background-color: $oscuro;
+    background-color: $principalOscuro;
     color: $claro;
     width: 2.5rem;
     height: 2.5rem;
@@ -25,7 +25,7 @@
     background-color: $claro;
     width: 40rem;
     z-index: 1;
-    box-shadow: 0 1rem 2rem $formulario;
+    box-shadow: $boxShadow;
     border-radius: 1rem;
 }
 
@@ -86,4 +86,8 @@
 
 .carrito__oculto {
     display: none;
+}
+
+.carrito__vacio {
+    text-align: center;
 }

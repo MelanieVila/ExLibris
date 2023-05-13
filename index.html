@@ -42,25 +42,17 @@
                     </ul>
 
                     <div class="carrito__icono">
-                        <div class="carrito__icono--contenedor">
+                        <div class="carrito__icono--container">
                             <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="6" cy="19" r="2" /><circle cx="17" cy="19" r="2" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
                             <div class="carrito__cantidad">
-                                <span id="carrito__cantidad--numero">0</span>
+                                <span class="carrito__cantidad--numero">0</span>
                             </div>
                         </div>
             
                         <div class="carrito__libros carrito__oculto">
                             <div class="carrito__container">
-                                <div class="carrito__productos">
-                                    <div class="carrito__informacion">
-                                        <span class="carrito__libro--cantidad"></span>
-                                        <p class="carrito__libro--titulo"></p>
-                                        <span class="carrito__libro--precio"></span>
-                                    </div>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icono__delete"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
-                                </div>
-                                <div class="carrito__total">
-                                    <h3>Total:</h3>
+                                <div class="carrito__total carrito__oculto">
+                                    <h3>Total a pagar:</h3>
                                     <span class="carrito__pago"></span>
                                 </div>
                                 <p class="carrito__vacio">El carrito está vacío.</p>
@@ -101,13 +93,6 @@
 
         <div class="overflow-hidden">
             <div class="row" id="index__vendidos"></div>
-        </div>
-
-        <div class="carrito__container"></div>
-        <div class="carrito__total">
-            <p id="total"></p>
-            <button id="vaciar" onclick="vaciar()">Vaciar carrito</button>
-            <button>Finalizar tu compra</button>
         </div>
     </main>
 

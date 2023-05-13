@@ -4,11 +4,11 @@ const indexVendidos = document.querySelector("#index__vendidos");
 
 // Carrito
 const carritoAgregar = document.querySelector(".agregar__carrito");
-const carritoBoton = document.querySelector(".carrito__icono--contenedor");
+const carritoIcono = document.querySelector(".carrito__icono");
+const carritoBoton = document.querySelector(".carrito__icono--container");
 const carritoNumero = document.querySelector(".carrito__cantidad--numero");
 const carritoLibros = document.querySelector(".carrito__libros");
 const carritoContainer = document.querySelector(".carrito__container");
-const carritoProductos = document.querySelector(".carrito__productos");
 const carritoTotal = document.querySelector(".carrito__total");
 const carritoPago = document.querySelector(".carrito__pago");
 const carritoVacio = document.querySelector(".carrito__vacio");
@@ -234,18 +234,18 @@ const libros = [
     }
 ];
 
-// Index
+// Página: INDEX
 
-let seleccionSeisNovedades = [23, 22, 5, 11, 3, 1]; // selección personalizada de libros
+let seleccionSeisNovedades = [23, 22, 5, 11, 3, 1]; // selección personalizada de libros que se mostrarán
 let indexSeisNovedades = seleccionSeisNovedades.map((catalogo) => libros[catalogo]);
 
 indexSeisNovedades.forEach((libro) => {
     let librosElegidos = document.createElement("div");
-    librosElegidos.setAttribute("class", "col-sm-6 col-lg-4"); // agrego un div respetando Bootstrap
+    librosElegidos.classList.add("col-sm-6", "col-lg-4"); // agrego un div respetando Bootstrap
     librosElegidos.innerHTML = `
         <a href="index.html">
             <img src="${libro.img}" class="libro__imagen" alt="${libro.titulo}">
-            <p class="libro__nombre">${libro.titulo}</p>
+            <h2 class="libro__nombre">${libro.titulo}</p>
         </a>
         <p class="libro__precio">$${libro.precio}</p>
 
@@ -256,18 +256,18 @@ indexSeisNovedades.forEach((libro) => {
     indexNovedades.append(librosElegidos);
 });
 
-let seleccionSeisVendidos = [6, 21, 17, 9, 4, 20]; // selección personalizada de libros
+let seleccionSeisVendidos = [6, 21, 17, 9, 4, 20]; // selección personalizada de libros que se mostrarán
 let indexSeisVendidos = seleccionSeisVendidos.map((catalogo) => libros[catalogo]);
 
 indexSeisVendidos.forEach((libro) => {
     let librosElegidos = document.createElement("div");
-    librosElegidos.setAttribute("class", "col-sm-6 col-lg-4"); // agrego un div respetando Bootstrap
+    librosElegidos.classList.add("col-sm-6", "col-lg-4"); // agrego un div respetando Bootstrap
     librosElegidos.innerHTML = `
         <a href="index.html">
             <img src="${libro.img}" class="libro__imagen" alt="${libro.titulo}">
-            <p class="libro__nombre">${libro.titulo}</p>
+            <h2 class="libro__nombre" id="libroTitulo">${libro.titulo}</p>
         </a>
-        <p class="libro__precio">$${libro.precio}</p>
+        <p class="libro__precio" id="libroPrecio">$${libro.precio}</p>
 
         <div class="alinear-boton">
             <button class="boton d-inline-block text-uppercase agregar__carrito" id="${libro.id}">Comprar</button>
@@ -277,5 +277,9 @@ indexSeisVendidos.forEach((libro) => {
 });
 
 // Carrito
+
+carritoIcono.addEventListener('click', () => {
+    carritoLibros.classList.toggle('carrito__oculto');
+}); // ocultamos el carrito al cargar la página
 
 let carrito = [];
