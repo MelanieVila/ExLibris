@@ -1,5 +1,5 @@
 # ExLibris
-Proyecto para el curso Desarrollo Web en la carrera <a href="https://www.coderhouse.com/online/carrera-online-desarrollo-fullstack" target="_blank">Desarrollo Full Stack</a> de Coderhouse (2023).
+Proyecto para los cursos Desarrollo Web y JavaScript en la carrera <a href="https://www.coderhouse.com/online/carrera-online-desarrollo-fullstack" target="_blank">Desarrollo Full Stack</a> de Coderhouse (2023).
 
 📚 Portadas de libros en 3D creadas en: https://diybookcovers.com/3Dmockups/
 
