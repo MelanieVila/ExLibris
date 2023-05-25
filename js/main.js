@@ -2,7 +2,7 @@ const indexCarrito = document.querySelector(".carrito__contenedor");
 const carritoCero = document.querySelector(".carrito__vacio");
 let libros;
 
-fetch("../js/catalogo.json")
+fetch("js/catalogo.json")
     .then(respuesta => respuesta.json())
     .then(data => {
         libros = data.libros;
