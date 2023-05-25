@@ -1,93 +1,15 @@
-.carrito__icono {
-    position: relative;
-}
-
-.carrito__cantidad {
-    position: absolute;
-    top: 55%;
-    right: 0;
-    background-color: $principalOscuro;
-    color: $claro;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    @include flexbox;
-}
-
-#carrito__cantidad--numero {
-    font-size: 1.2rem;
-}
-
-.carrito__libros {
-    position: absolute;
-    top: 5rem;
-    right: 0;
-    background-color: $claro;
-    width: 40rem;
-    z-index: 1;
-    box-shadow: $boxShadow;
-    border-radius: 1rem;
-}
-
-.carrito__productos {
-    display: flex;
+.carrito__contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
-    justify-content: space-between;
-    padding: 3rem;
-    border-bottom: .1rem solid $formulario;
-}
+    justify-content: center;
+    margin-left: 40px;
 
-.carrito__informacion {
-    display: flex;
-    justify-content: space-between;
-    flex: 0.8;
-}
+    .carrito__libro {
+        width: 100%;
+    }
 
-.carrito__libro--titulo {
-    font-size: 2rem;
-}
-
-.carrito__libro--precio {
-    font-weight: 700;
-    font-size: 2rem;
-    margin-left: 1rem;
-}
-
-.carrito__libro--cantidad {
-    font-weight: 400;
-    font-size: 2rem;
-}
-
-.icono__delete {
-    width: 2.5rem;
-    height: 2.5rem;
-}
-
-.icono__delete:hover {
-    stroke: red;
-    cursor: pointer;
-}
-
-.carrito__total {
-    @include flexbox;
-    padding: 2rem 0;
-    gap: 2rem;
-}
-
-.carrito__total h3 {
-    font-size: 2rem;
-    font-weight: 700;
-}
-
-.carrito__pago {
-    font-size: 2rem;
-    font-weight: 900;
-}
-
-.carrito__oculto {
-    display: none;
-}
-
-.carrito__vacio {
-    text-align: center;
+    .subtotal {
+        text-align: end;
+    }
 }

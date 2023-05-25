@@ -110,7 +110,6 @@ h4 {
 
 .libro__nombre,
 .libro__precio {
-    color: $principal;
     font-family: $fuenteSecundaria;
     margin: 1rem 0;
     text-align: center;
@@ -118,10 +117,12 @@ h4 {
 }
 
 .libro__nombre {
+    color: $principalOscuro;
     font-size: 2.7rem;
 }
 
 .libro__precio {
+    color: $principal;
     font-size: 2.2rem;
 }
 

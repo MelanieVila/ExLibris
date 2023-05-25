@@ -7,7 +7,8 @@
 }
 
 input,
-textarea {
+textarea,
+button {
     font-family: $fuenteSecundaria;
     margin: 0;
 }
@@ -56,6 +57,7 @@ textarea {
     background: none;
     border: solid .2rem $formulario;
     color: $formulario;
+    background-color: $claro;
     font-size: 2rem;
     letter-spacing: .1rem;
     padding: 2rem 3.5rem;
