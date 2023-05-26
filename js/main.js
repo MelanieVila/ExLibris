@@ -1,5 +1,5 @@
 const indexCarrito = document.querySelector(".carrito__contenedor");
-const carritoCero = document.querySelector(".carrito__vacio");
+const indexCarritoVacio = document.querySelector(".carrito__vacio");
 let libros;
 
 fetch("js/catalogo.json")
@@ -54,7 +54,6 @@ fetch("js/catalogo.json")
         agregarCarrito();
         sumarLibros();
         restarLibros();
-        quitarLibros();
         carritoTotal();
     });
 
@@ -62,17 +61,19 @@ let carrito = [];
 
 carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-function carritoVacio() {
-    if (carrito.length === 0) {
-        carritoCero.innerHTML = "";
+// CARRITO VACÍO, párrafo default
+function carritoVacio() { // FALTA ARREGLAR POR QUÉ AL ACTUALIZAR LA PÁGINA ¡A VECES! SE VE EL MENSAJE "carritoDefault" (lo ideal: siempre)
+    if (carrito.length <= 0) {
+        indexCarritoVacio.innerHTML = "";
         const carritoDefault = document.createElement("p");
         carritoDefault.classList.add("text-center");
         carritoDefault.innerHTML = `El carrito está vacío.`;
-        carritoCero.append(carritoDefault);
+        indexCarritoVacio.append(carritoDefault);
     }
     localStorage.clear(); // A CHEQUEAR
 }
 
+// MOSTRAR CARRITO
 function mostrarCarrito() {
     indexCarrito.innerHTML = "";
 
@@ -81,15 +82,14 @@ function mostrarCarrito() {
             const librosCarrito = document.createElement("div");
 
             librosCarrito.innerHTML = `
-                <img class="carrito__libro" src="${libro.img}">
+                <img src="${libro.img}" class="carrito__libro">
                 <h4>${libro.titulo}</h4>
                 <p>$${libro.precio}</p>
                 <div>
                     <button class="botonMenos boton py-2 px-3">-</button>
                     <button class="boton py-2 px-3">${libro.cantidad}</button>
                     <button class="botonMas boton py-2 px-3">+</button>
-                </div>
-                <button id="${libro.id}" class="botonQuitar boton py-2 px-3">Quitar</button>`;
+                </div>`;
             indexCarrito.append(librosCarrito);
         });
         carritoTotal();
@@ -100,7 +100,6 @@ function mostrarCarrito() {
             <button class="botonComprar boton py-2 px-3">Comprar</button>`;
         indexCarrito.append(botonLimpiar);
 
-        quitarLibros();
         sumarLibros();
         restarLibros();
     } else {
@@ -108,6 +107,7 @@ function mostrarCarrito() {
     }
 }
 
+// BOTÓN PARA AGREGAR AL CARRITO
 function carritoBoton() {
     const carritoBotones = document.querySelectorAll(".agregar__carrito");
     carritoBotones.forEach((boton) => {
@@ -115,6 +115,7 @@ function carritoBoton() {
     });
 }
 
+// AGREGAR LIBROS AL CARRITO
 function agregarCarrito() {
     const stockDisponible = carrito.find((stock) => stock.id === libro.id);
 
@@ -129,6 +130,7 @@ function agregarCarrito() {
     }
 }
 
+// AGREGAR MÁS LIBROS AL CARRITO
 function sumarLibros() {
     const botonMas = document.querySelectorAll(".botonMas");
     botonMas.forEach((boton, index) => {
@@ -141,6 +143,7 @@ function sumarLibros() {
     });
 }
 
+// QUITAR LIBROS DEL CARRITO
 function restarLibros() {
     const botonMenos = document.querySelectorAll(".botonMenos");
     botonMenos.forEach((boton, index) => {
@@ -155,28 +158,16 @@ function restarLibros() {
     });
 }
 
-function quitarLibros() {
-    const quitarLibro = document.querySelectorAll(".botonQuitar");
-    quitarLibro.forEach((boton) => {
-        boton.addEventListener("click", () => {
-            const deleted = carrito.find((libro) => libro.id === idBoton);
-            deleted.cantidad = 1;
-            const index = carrito.indexOf(deleted);
-            carrito.splice(index, 1);
-            localStorage.setItem("carrito", JSON.stringify(carrito));
-            mostrarCarrito();
-            carritoVacio();
-        });
-    });
-}
-
+// TOTAL DE LA COMPRA
 function carritoTotal() {
-    totalCompra = carrito.reduce((accum, producto) => {
-        return accum + producto.precio * producto.cantidad;
-    }, 0);
+    totalCompra = carrito.reduce((accum, libro) => { return accum + libro.precio * libro.cantidad; }, 0);
     const carritoTotal = document.createElement("div");
     carritoTotal.innerHTML = `
         <hr class="mt-8 mb-4">
         <p class="total col-span-2 text-right">Total: $${totalCompra}</p>`;
     indexCarrito.append(carritoTotal);
 }
+
+// Falta agregar función para pagar
+// Falta agregar función para vaciar carrito
+// Falta Sweet Alert
