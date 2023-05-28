@@ -6,6 +6,7 @@ fetch("js/catalogo.json")
     .then(respuesta => respuesta.json())
     .then(data => {
         libros = data.libros;
+        guardarProductos(libros);
         let librosNovedades = libros.filter(libro => libro.novedad === true);
         let librosVendidos = libros.filter(libro => libro.popular === true);
 
@@ -22,7 +23,7 @@ fetch("js/catalogo.json")
                     <p class="libro__precio">$${libro.precio}</p>
 
                     <div class="alinear-boton">
-                        <button class="boton d-inline-block text-uppercase agregar__carrito" data-id="${libro.id}">Comprar</button>
+                        <button class="boton d-inline-block text-uppercase agregar__carrito" data-id="${libro.id}" onclick="agregarCarrito(${libro.id})">Comprar</button>
                     </div>
                 </div>`;
         }
@@ -37,7 +38,7 @@ fetch("js/catalogo.json")
                     <p class="libro__precio">$${libro.precio}</p>
 
                     <div class="alinear-boton">
-                        <button class="boton d-inline-block text-uppercase agregar__carrito" data-id="${libro.id}">Comprar</button>
+                        <button class="boton d-inline-block text-uppercase agregar__carrito" data-id="${libro.id}" onclick="agregarCarrito(${libro.id})">Comprar</button>
                     </div>
                 </div>`;
         }
@@ -48,21 +49,30 @@ fetch("js/catalogo.json")
         document.querySelector("#index__novedades").innerHTML = novedadesHTML;
         document.querySelector("#index__vendidos").innerHTML = vendidosHTML;
 
-        carritoVacio();
-        mostrarCarrito();
-        carritoBoton();
-        agregarCarrito();
-        sumarLibros();
-        restarLibros();
         carritoTotal();
     });
 
-let carrito = [];
+function cargarProductos() {
+    return JSON.parse(localStorage.getItem("productos")) || [];
+}
 
-carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+function guardarProductos(productos) {
+    localStorage.setItem("productos", JSON.stringify(productos));
+}
 
-// CARRITO VACÍO, párrafo default
-function carritoVacio() { // FALTA ARREGLAR POR QUÉ AL ACTUALIZAR LA PÁGINA ¡A VECES! SE VE EL MENSAJE "carritoDefault" (lo ideal: siempre)
+function cargarCarrito() {
+    return JSON.parse(localStorage.getItem("carrito")) || [];
+}
+
+function guardarCarrito(productos) {
+    localStorage.setItem("carrito", JSON.stringify(productos));
+}
+
+/* const productos = cargarProductos();
+const carrito = cargarCarrito(); */
+
+// CARRITO VACÍO
+function carritoVacio() {
     if (carrito.length <= 0) {
         indexCarritoVacio.innerHTML = "";
         const carritoDefault = document.createElement("p");
@@ -70,12 +80,13 @@ function carritoVacio() { // FALTA ARREGLAR POR QUÉ AL ACTUALIZAR LA PÁGINA ¡
         carritoDefault.innerHTML = `El carrito está vacío.`;
         indexCarritoVacio.append(carritoDefault);
     }
-    localStorage.clear(); // A CHEQUEAR
+    localStorage.clear();
 }
 
 // MOSTRAR CARRITO
 function mostrarCarrito() {
     indexCarrito.innerHTML = "";
+    const carrito = cargarCarrito();
 
     if (carrito.length > 0) {
         carrito.forEach((libro) => {
@@ -107,27 +118,22 @@ function mostrarCarrito() {
     }
 }
 
-// BOTÓN PARA AGREGAR AL CARRITO
-function carritoBoton() {
-    const carritoBotones = document.querySelectorAll(".agregar__carrito");
-    carritoBotones.forEach((boton) => {
-        boton.addEventListener("click", agregarCarrito);
-    });
-}
-
 // AGREGAR LIBROS AL CARRITO
-function agregarCarrito() {
-    const stockDisponible = carrito.find((stock) => stock.id === libro.id);
-
-    if (stockDisponible) {
-        stockDisponible.cantidad++;
-        localStorage.setItem("carrito", JSON.stringify(carrito));
-        mostrarCarrito();
+function agregarCarrito(id) {
+    const carrito = cargarCarrito();
+    let pos = carrito.findIndex(stock => stock.id === id);
+    
+    if (pos > -1) {
+        carrito[pos].cantidad++;
     } else {
-        carrito.push(stockDisponible);
-        localStorage.setItem("carrito", JSON.stringify(carrito));
-        mostrarCarrito();
+        const productos = cargarProductos();
+        let producto = productos.find((stock) => stock.id == id);
+        producto.cantidad = 1;
+        carrito.push(producto);
     }
+
+    guardarCarrito(carrito);
+    mostrarCarrito();
 }
 
 // AGREGAR MÁS LIBROS AL CARRITO
@@ -160,6 +166,7 @@ function restarLibros() {
 
 // TOTAL DE LA COMPRA
 function carritoTotal() {
+    const carrito = cargarCarrito();
     totalCompra = carrito.reduce((accum, libro) => { return accum + libro.precio * libro.cantidad; }, 0);
     const carritoTotal = document.createElement("div");
     carritoTotal.innerHTML = `
