@@ -6,7 +6,8 @@
             "autor": "Orwell, George",
             "genero": "Clásico",
             "precio": 1250,
-            "img": "./img/AF.png"
+            "img": "./img/AF.png",
+            "cantidad": 1
         },
         {
             "id": "002",
@@ -15,7 +16,8 @@
             "genero": "Fantasía",
             "precio": 1750,
             "img": "./img/AGOT.png",
-            "novedad": true
+            "novedad": true,
+            "cantidad": 1
         },
         {
             "id": "003",
@@ -23,7 +25,8 @@
             "autor": "Christie, Agatha",
             "genero": "Misterio",
             "precio": 1300,
-            "img": "./img/ATTWN.png"
+            "img": "./img/ATTWN.png",
+            "cantidad": 1
         },
         {
             "id": "004",
@@ -32,7 +35,8 @@
             "genero": "Ciencia Ficción",
             "precio": 1250,
             "img": "./img/F451.png",
-            "novedad": true
+            "novedad": true,
+            "cantidad": 1
         },
         {
             "id": "005",
@@ -41,7 +45,8 @@
             "genero": "Clásico",
             "precio": 1400,
             "img": "./img/FRA.png",
-            "popular": true
+            "popular": true,
+            "cantidad": 1
         },
         {
             "id": "006",
@@ -50,7 +55,8 @@
             "genero": "Fantasía",
             "precio": 1400,
             "img": "./img/HM1Q84.png",
-            "novedad": true
+            "novedad": true,
+            "cantidad": 1
         },
         {
             "id": "007",
@@ -59,7 +65,8 @@
             "genero": "Fantasía",
             "precio": 1650,
             "img": "./img/HPATPS.png",
-            "popular": true
+            "popular": true,
+            "cantidad": 1
         },
         {
             "id": "008",
@@ -67,7 +74,8 @@
             "autor": "Bronte, Charlotte",
             "genero": "Clásico",
             "precio": 1350,
-            "img": "./img/JE.png"
+            "img": "./img/JE.png",
+            "cantidad": 1
         },
         {
             "id": "009",
@@ -75,7 +83,8 @@
             "autor": "Golding, William",
             "genero": "Clásico",
             "precio": 1300,
-            "img": "./img/LOTF.png"
+            "img": "./img/LOTF.png",
+            "cantidad": 1
         },
         {
             "id": "010",
@@ -84,7 +93,8 @@
             "genero": "Clásico",
             "precio": 1300,
             "img": "./img/LW.png",
-            "popular": true
+            "popular": true,
+            "cantidad": 1
         },
         {
             "id": "011",
@@ -92,7 +102,8 @@
             "autor": "Kaur, Rupi",
             "genero": "Poesía",
             "precio": 1400,
-            "img": "./img/MAH.png"
+            "img": "./img/MAH.png",
+            "cantidad": 1
         },
         {
             "id": "012",
@@ -101,7 +112,8 @@
             "genero": "Infantil",
             "precio": 1350,
             "img": "./img/MAT.png",
-            "novedad": true
+            "novedad": true,
+            "cantidad": 1
         },
         {
             "id": "013",
@@ -109,7 +121,8 @@
             "autor": "Riordan, Rick",
             "genero": "Juvenil",
             "precio": 1550,
-            "img": "./img/PJTLT.png"
+            "img": "./img/PJTLT.png",
+            "cantidad": 1
         },
         {
             "id": "014",
@@ -117,7 +130,8 @@
             "autor": "Zusak, Markus",
             "genero": "Histórico",
             "precio": 1400,
-            "img": "./img/TBT.png"
+            "img": "./img/TBT.png",
+            "cantidad": 1
         },
         {
             "id": "015",
@@ -125,7 +139,8 @@
             "autor": "Salinger, J.D.",
             "genero": "Clásico",
             "precio": 1350,
-            "img": "./img/TCITR.png"
+            "img": "./img/TCITR.png",
+            "cantidad": 1
         },
         {
             "id": "016",
@@ -133,7 +148,8 @@
             "autor": "Williams, Pip",
             "genero": "Histórico",
             "precio": 1500,
-            "img": "./img/TDOLW.png"
+            "img": "./img/TDOLW.png",
+            "cantidad": 1
         },
         {
             "id": "017",
@@ -141,7 +157,8 @@
             "autor": "Tolkien, J.R.R.",
             "genero": "Fantasía",
             "precio": 1650,
-            "img": "./img/TFOTR.png"
+            "img": "./img/TFOTR.png",
+            "cantidad": 1
         },
         {
             "id": "018",
@@ -150,7 +167,8 @@
             "genero": "Clásico",
             "precio": 1250,
             "img": "./img/TGG.png",
-            "popular": true
+            "popular": true,
+            "cantidad": 1
         },
         {
             "id": "019",
@@ -158,7 +176,8 @@
             "autor": "Collins, Suzanne",
             "genero": "Juvenil",
             "precio": 1450,
-            "img": "./img/THG.png"
+            "img": "./img/THG.png",
+            "cantidad": 1
         },
         {
             "id": "020",
@@ -166,7 +185,8 @@
             "autor": "Atwood, Margaret",
             "genero": "Ciencia Ficción",
             "precio": 1600,
-            "img": "./img/THT.png"
+            "img": "./img/THT.png",
+            "cantidad": 1
         },
         {
             "id": "021",
@@ -175,7 +195,8 @@
             "genero": "Clásico",
             "precio": 1400,
             "img": "./img/TKAM.png",
-            "popular": true
+            "popular": true,
+            "cantidad": 1
         },
         {
             "id": "022",
@@ -184,7 +205,8 @@
             "genero": "Clásico",
             "precio": 1350,
             "img": "./img/TLP.png",
-            "popular": true
+            "popular": true,
+            "cantidad": 1
         },
         {
             "id": "023",
@@ -193,7 +215,8 @@
             "genero": "Histórico",
             "precio": 1500,
             "img": "./img/TPL.png",
-            "novedad": true
+            "novedad": true,
+            "cantidad": 1
         },
         {
             "id": "024",
@@ -202,7 +225,8 @@
             "genero": "Juvenil",
             "precio": 1450,
             "img": "./img/TPOBAW.png",
-            "novedad": true
+            "novedad": true,
+            "cantidad": 1
         },
         {
             "id": "025",
@@ -210,7 +234,8 @@
             "autor": "Wilde, Oscar",
             "genero": "Clásico",
             "precio": 1400,
-            "img": "./img/TPODG.png"
+            "img": "./img/TPODG.png",
+            "cantidad": 1
         },
         {
             "id": "026",
@@ -218,7 +243,8 @@
             "autor": "King, Stephen",
             "genero": "Terror",
             "precio": 1650,
-            "img": "./img/TS.png"
+            "img": "./img/TS.png",
+            "cantidad": 1
         },
         {
             "id": "027",
@@ -226,7 +252,8 @@
             "autor": "Steel, Danielle",
             "genero": "Romance",
             "precio": 1550,
-            "img": "./img/WAT.png"
+            "img": "./img/WAT.png",
+            "cantidad": 1
         }
     ]
 }
