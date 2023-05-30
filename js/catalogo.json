@@ -1,7 +1,7 @@
 {
     "libros": [
         {
-            "id": "001",
+            "id": "1",
             "titulo": "Animal Farm",
             "autor": "Orwell, George",
             "genero": "Clásico",
@@ -10,7 +10,7 @@
             "cantidad": 1
         },
         {
-            "id": "002",
+            "id": "2",
             "titulo": "A Game of Thrones",
             "autor": "Martin, George R.R.",
             "genero": "Fantasía",
@@ -20,7 +20,7 @@
             "cantidad": 1
         },
         {
-            "id": "003",
+            "id": "3",
             "titulo": "And Then There Were None",
             "autor": "Christie, Agatha",
             "genero": "Misterio",
@@ -29,7 +29,7 @@
             "cantidad": 1
         },
         {
-            "id": "004",
+            "id": "4",
             "titulo": "Fahrenheit 451",
             "autor": "Bradbury, Ray",
             "genero": "Ciencia Ficción",
@@ -39,7 +39,7 @@
             "cantidad": 1
         },
         {
-            "id": "005",
+            "id": "5",
             "titulo": "Frankenstein",
             "autor": "Shelley, Mary",
             "genero": "Clásico",
@@ -49,7 +49,7 @@
             "cantidad": 1
         },
         {
-            "id": "006",
+            "id": "6",
             "titulo": "1Q84",
             "autor": "Murakami, Haruki",
             "genero": "Fantasía",
@@ -59,7 +59,7 @@
             "cantidad": 1
         },
         {
-            "id": "007",
+            "id": "7",
             "titulo": "Harry Potter And The Philosopher's Stone",
             "autor": "Rowling, J.K.",
             "genero": "Fantasía",
@@ -69,7 +69,7 @@
             "cantidad": 1
         },
         {
-            "id": "008",
+            "id": "8",
             "titulo": "Jane Eyre",
             "autor": "Bronte, Charlotte",
             "genero": "Clásico",
@@ -78,7 +78,7 @@
             "cantidad": 1
         },
         {
-            "id": "009",
+            "id": "9",
             "titulo": "Lord Of The Flies",
             "autor": "Golding, William",
             "genero": "Clásico",
@@ -87,7 +87,7 @@
             "cantidad": 1
         },
         {
-            "id": "010",
+            "id": "10",
             "titulo": "Little Women",
             "autor": "May Alcott, Louisa",
             "genero": "Clásico",
@@ -97,7 +97,7 @@
             "cantidad": 1
         },
         {
-            "id": "011",
+            "id": "11",
             "titulo": "Milk And Honey",
             "autor": "Kaur, Rupi",
             "genero": "Poesía",
@@ -106,7 +106,7 @@
             "cantidad": 1
         },
         {
-            "id": "012",
+            "id": "12",
             "titulo": "Matilda",
             "autor": "Dahl, Roald",
             "genero": "Infantil",
@@ -116,7 +116,7 @@
             "cantidad": 1
         },
         {
-            "id": "013",
+            "id": "13",
             "titulo": "The Lightning Thief",
             "autor": "Riordan, Rick",
             "genero": "Juvenil",
@@ -125,7 +125,7 @@
             "cantidad": 1
         },
         {
-            "id": "014",
+            "id": "14",
             "titulo": "The Book Thief",
             "autor": "Zusak, Markus",
             "genero": "Histórico",
@@ -134,7 +134,7 @@
             "cantidad": 1
         },
         {
-            "id": "015",
+            "id": "15",
             "titulo": "The Catcher In The Rye",
             "autor": "Salinger, J.D.",
             "genero": "Clásico",
@@ -143,7 +143,7 @@
             "cantidad": 1
         },
         {
-            "id": "016",
+            "id": "16",
             "titulo": "The Dictionary Of Lost Words",
             "autor": "Williams, Pip",
             "genero": "Histórico",
@@ -152,7 +152,7 @@
             "cantidad": 1
         },
         {
-            "id": "017",
+            "id": "17",
             "titulo": "The Fellowship Of The Ring",
             "autor": "Tolkien, J.R.R.",
             "genero": "Fantasía",
@@ -161,7 +161,7 @@
             "cantidad": 1
         },
         {
-            "id": "018",
+            "id": "18",
             "titulo": "The Great Gatsby",
             "autor": "Fitzgerald, F. Scott",
             "genero": "Clásico",
@@ -171,7 +171,7 @@
             "cantidad": 1
         },
         {
-            "id": "019",
+            "id": "19",
             "titulo": "The Hunger Games",
             "autor": "Collins, Suzanne",
             "genero": "Juvenil",
@@ -180,7 +180,7 @@
             "cantidad": 1
         },
         {
-            "id": "020",
+            "id": "20",
             "titulo": "The Handmaid's Tale",
             "autor": "Atwood, Margaret",
             "genero": "Ciencia Ficción",
@@ -189,7 +189,7 @@
             "cantidad": 1
         },
         {
-            "id": "021",
+            "id": "21",
             "titulo": "To Kill A Mockingbird",
             "autor": "Lee, Harper",
             "genero": "Clásico",
@@ -199,7 +199,7 @@
             "cantidad": 1
         },
         {
-            "id": "022",
+            "id": "22",
             "titulo": "The Little Prince",
             "autor": "De Saint-Exupéry, Antoine",
             "genero": "Clásico",
@@ -209,7 +209,7 @@
             "cantidad": 1
         },
         {
-            "id": "023",
+            "id": "23",
             "titulo": "The Personal Librarian",
             "autor": "Benedict, Marie",
             "genero": "Histórico",
@@ -219,7 +219,7 @@
             "cantidad": 1
         },
         {
-            "id": "024",
+            "id": "24",
             "titulo": "The Perks Of Being A Wallflower",
             "autor": "Chbosky, Stephen",
             "genero": "Juvenil",
@@ -229,7 +229,7 @@
             "cantidad": 1
         },
         {
-            "id": "025",
+            "id": "25",
             "titulo": "The Picture Of Dorian Gray",
             "autor": "Wilde, Oscar",
             "genero": "Clásico",
@@ -238,7 +238,7 @@
             "cantidad": 1
         },
         {
-            "id": "026",
+            "id": "26",
             "titulo": "The Shining",
             "autor": "King, Stephen",
             "genero": "Terror",
@@ -247,7 +247,7 @@
             "cantidad": 1
         },
         {
-            "id": "027",
+            "id": "27",
             "titulo": "Without A Trace",
             "autor": "Steel, Danielle",
             "genero": "Romance",

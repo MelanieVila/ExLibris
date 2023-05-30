@@ -40,7 +40,7 @@ fetch("js/catalogo.json")
                     <p class="libro__precio">$${libro.precio}</p>
 
                     <div class="alinear-boton">
-                        <button class="boton d-inline-block text-uppercase agregar__carrito" data-id="${libro.id}" onclick="agregarCarrito(${libro.id})">Comprar</button>
+                        <button class="boton d-inline-block text-uppercase" data-id="${libro.id}" onclick="agregarCarrito(${libro.id})">Comprar</button>
                     </div>
                 </div>`;
         }
@@ -110,8 +110,8 @@ function mostrarCarrito() {
         const botonLimpiar = document.createElement("div");
         botonLimpiar.classList.add("carrito__botones");
         botonLimpiar.innerHTML = `
-            <button type="button" class="botonVaciar boton py-2 px-3" onclick="vaciarCarrito">Vaciar</button>
-            <button type="button" class="botonComprar boton py-2 px-3" onclick="pagarCarrito">Comprar</button>`;
+            <button type="button" class="botonVaciar boton py-2 px-3" onclick="vaciarCarrito()">Vaciar</button>
+            <button type="button" class="botonComprar boton py-2 px-3" onclick="pagarCarrito()">Comprar</button>`;
         indexCarrito.append(botonLimpiar);
 
         sumarLibros();
@@ -128,7 +128,7 @@ function agregarCarrito(id) {
     const carrito = cargarCarrito();
     let pos = carrito.findIndex(stock => stock.id === id);
 
-    if (pos > -1) {
+    if (pos >= 0) {
         carrito[pos].cantidad++;
     } else {
         const productos = cargarProductos();
@@ -248,9 +248,6 @@ function pagarCarrito() {
         });
     });
 }
-
-// Con algunos libros me pasa que se agrega OTRO libro (por ejemplo, si
-// quiero agregar To Kill A Mockingbird me agrega OTRO libro en carrito)
 
 // Falta que al agregar libros se sumen a los mismos, no aparte (si yo agrego dos
 // veces El Principito, aparece cada libro por separado, no sumándose a la misma cantidad)
