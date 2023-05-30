@@ -1,10 +1,11 @@
-const indexCarrito = document.querySelector(".carrito__contenedor");
-const indexCarritoVacio = document.querySelector(".carrito__vacio");
+// JavaScript correspondiente a index.html
+
+const indexCarrito = document.querySelector("#carrito__index");
 let libros;
 let carrito = [];
 
 fetch("js/catalogo.json")
-    .then(respuesta => respuesta.json())
+    .then(response => response.json())
     .then(data => {
         libros = data.libros;
         guardarProductos(libros);
@@ -49,10 +50,11 @@ fetch("js/catalogo.json")
 
         document.querySelector("#index__novedades").innerHTML = novedadesHTML;
         document.querySelector("#index__vendidos").innerHTML = vendidosHTML;
-
-        carritoTotal();
     });
 
+carritoVacio();
+
+// LOCALSTORAGE
 function cargarProductos() {
     return JSON.parse(localStorage.getItem("productos")) || [];
 }
@@ -72,11 +74,11 @@ function guardarCarrito(productos) {
 // CARRITO VACÍO (por default)
 function carritoVacio() {
     if (carrito.length <= 0) {
-        indexCarritoVacio.innerHTML = "";
+        indexCarrito.innerHTML = "";
         const carritoDefault = document.createElement("p");
         carritoDefault.classList.add("text-center");
         carritoDefault.innerHTML = `El carrito está vacío.`;
-        indexCarritoVacio.append(carritoDefault);
+        indexCarrito.append(carritoDefault);
     }
     localStorage.clear();
 }
@@ -89,6 +91,7 @@ function mostrarCarrito() {
     if (carrito.length > 0) {
         carrito.forEach((libro) => {
             const librosCarrito = document.createElement("div");
+            librosCarrito.classList.add("carrito__contenedor");
 
             librosCarrito.innerHTML = `
                 <img src="${libro.img}" class="carrito__libro">
@@ -101,9 +104,11 @@ function mostrarCarrito() {
                 </div>`;
             indexCarrito.append(librosCarrito);
         });
+
         carritoTotal();
 
         const botonLimpiar = document.createElement("div");
+        botonLimpiar.classList.add("carrito__botones");
         botonLimpiar.innerHTML = `
             <button type="button" class="botonVaciar boton py-2 px-3" onclick="vaciarCarrito">Vaciar</button>
             <button type="button" class="botonComprar boton py-2 px-3" onclick="pagarCarrito">Comprar</button>`;
@@ -139,10 +144,11 @@ function agregarCarrito(id) {
 // AGREGAR MÁS LIBROS DEL MISMO PRODUCTO
 function sumarLibros() {
     const botonMas = document.querySelectorAll(".botonMas");
-    botonMas.forEach((boton, index) => {
-        boton.addEventListener("click", () => {
-            const libroSeleccionado = carrito[index];
-            libroSeleccionado.cantidad++;
+    botonMas.forEach((boton, i) => {
+        boton.addEventListener("click", (e) => {
+            const carrito = cargarCarrito();
+            const producto = carrito[i];
+            producto.cantidad++;
             localStorage.setItem("carrito", JSON.stringify(carrito));
             mostrarCarrito();
         });
@@ -152,11 +158,12 @@ function sumarLibros() {
 // QUITAR LIBROS
 function restarLibros() {
     const botonMenos = document.querySelectorAll(".botonMenos");
-    botonMenos.forEach((boton, index) => {
-        boton.addEventListener("click", () => {
-            const libroSeleccionado = carrito[index];
-            if (libroSeleccionado.cantidad > 1) {
-                libroSeleccionado.cantidad--;
+    botonMenos.forEach((boton, i) => {
+        boton.addEventListener("click", (e) => {
+            const carrito = cargarCarrito();
+            const producto = carrito[i];
+            if (producto.cantidad > 1) {
+                producto.cantidad--;
                 localStorage.setItem("carrito", JSON.stringify(carrito));
                 mostrarCarrito();
             }
@@ -168,7 +175,7 @@ function restarLibros() {
 function vaciarCarrito() {
     const botonVaciar = document.querySelector(".botonVaciar");
     botonVaciar.addEventListener("click", () => {
-        Swal.fire({
+        swal.fire({
             title: "¿Te gustaría vaciar el carrito?",
             icon: "warning",
             iconColor: "#DB2D3B",
@@ -179,7 +186,7 @@ function vaciarCarrito() {
             denyButtonColor: "#DB2D3B",
         }).then((result) => {
             if (result.isConfirmed) {
-                Swal.fire({
+                swal.fire({
                     icon: "success",
                     iconColor: "#2A9D8F",
                     text: `El carrito está vacío.`,
@@ -187,6 +194,7 @@ function vaciarCarrito() {
                     confirmButtonColor: "#000000",
                 });
                 carritoNulo();
+                carrito = [];
             }
         });
     });
@@ -196,18 +204,19 @@ function carritoNulo() {
     carrito.forEach((libro) => (libro.cantidad = 1));
     carrito.length = 0;
     indexCarrito.innerHTML = "";
-    localStorage.setItem("carrito", JSON.stringify(carrito));
     carritoVacio();
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    carrito = [];
 }
 
 // TOTAL DE LA COMPRA
 function carritoTotal() {
     const carrito = cargarCarrito();
-    totalCompra = carrito.reduce((accum, libro) => { return accum + libro.precio * libro.cantidad; }, 0);
+    totalCompra = carrito.reduce((acumulador, libro) => { return acumulador + libro.precio * libro.cantidad; }, 0);
     const carritoTotal = document.createElement("div");
     carritoTotal.innerHTML = `
-        <hr class="mt-8 mb-4">
-        <p class="total col-span-2 text-right">Total: $${totalCompra}</p>`;
+        <hr>
+        <p class="text-end">Total: $${totalCompra}</p>`;
     indexCarrito.append(carritoTotal);
 }
 
@@ -215,18 +224,18 @@ function carritoTotal() {
 function pagarCarrito() {
     const botonComprar = document.querySelector(".botonComprar");
     botonComprar.addEventListener("click", () => {
-        Swal.fire({
+        swal.fire({
             title: "¿Te gustaría finalizar tu compra?",
             icon: "warning",
             iconColor: "#DB2D3B",
             showDenyButton: true,
             confirmButtonText: "Aceptar",
-            confirmButtonColor: "#2A9D8F",
+            confirmButtonColor: "#211C88",
             denyButtonText: `Seguir comprando`,
-            denyButtonColor: "#DB2D3B",
+            denyButtonColor: "#2A9D8F",
         }).then((result) => {
             if (result.isConfirmed) {
-                Swal.fire({
+                swal.fire({
                     icon: "success",
                     iconColor: "#211C88",
                     text: `¡Gracias por tu compra!`,
@@ -234,10 +243,17 @@ function pagarCarrito() {
                     confirmButtonColor: "#000000",
                 });
                 carritoNulo();
+                carrito = [];
             }
         });
     });
 }
 
-// Falta agregar que aparezca "El carrito está vacío." por default
-// Falta que al agregar libros se sumen a los mismos, no aparte
+// Con algunos libros me pasa que se agrega OTRO libro (por ejemplo, si
+// quiero agregar To Kill A Mockingbird me agrega OTRO libro en carrito)
+
+// Falta que al agregar libros se sumen a los mismos, no aparte (si yo agrego dos
+// veces El Principito, aparece cada libro por separado, no sumándose a la misma cantidad)
+
+// ¿Por qué al comprar o vaciar carrito no me deja
+// realizar una nueva compra? (tengo que apretar F5)
