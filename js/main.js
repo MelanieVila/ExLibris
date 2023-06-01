@@ -1,7 +1,7 @@
 // JavaScript correspondiente a index.html
 
 const indexCarrito = document.querySelector("#carrito__index");
-let libros;
+let libros = [];
 let carrito = [];
 
 fetch("js/catalogo.json")
@@ -97,7 +97,7 @@ function mostrarCarrito() {
                 <img src="${libro.img}" class="carrito__libro">
                 <h4>${libro.titulo}</h4>
                 <p>$${libro.precio}</p>
-                <div>
+                <div class="text-center">
                     <button type="button" class="botonMenos boton py-2 px-3" onclick="restarLibros(${libro.id})">-</button>
                     <button class="boton py-2 px-3">${libro.cantidad}</button>
                     <button type="button" class="botonMas boton py-2 px-3" onclick="sumarLibros(${libro.id})">+</button>
@@ -107,17 +107,12 @@ function mostrarCarrito() {
 
         carritoTotal();
 
-        const botonLimpiar = document.createElement("div");
-        botonLimpiar.classList.add("carrito__botones");
-        botonLimpiar.innerHTML = `
+        const carritoBotones = document.createElement("div");
+        carritoBotones.classList.add("carrito__botones");
+        carritoBotones.innerHTML = `
             <button type="button" class="botonVaciar boton py-2 px-3" onclick="vaciarCarrito()">Vaciar</button>
             <button type="button" class="botonComprar boton py-2 px-3" onclick="pagarCarrito()">Comprar</button>`;
-        indexCarrito.append(botonLimpiar);
-
-        sumarLibros();
-        restarLibros();
-        vaciarCarrito();
-        pagarCarrito();
+        indexCarrito.append(carritoBotones);
     } else {
         carritoVacio();
     }
@@ -126,9 +121,9 @@ function mostrarCarrito() {
 // AGREGAR LIBROS
 function agregarCarrito(id) {
     const carrito = cargarCarrito();
-    let pos = carrito.findIndex(stock => stock.id === id);
+    let pos = carrito.findIndex(stock => stock.id == id);
 
-    if (pos >= 0) {
+    if (pos > -1) {
         carrito[pos].cantidad++;
     } else {
         const productos = cargarProductos();
@@ -155,7 +150,7 @@ function sumarLibros() {
     });
 }
 
-// QUITAR LIBROS
+// REDUCIR CANTIDAD DE LIBROS
 function restarLibros() {
     const botonMenos = document.querySelectorAll(".botonMenos");
     botonMenos.forEach((boton, i) => {
@@ -203,7 +198,7 @@ function vaciarCarrito() {
 function carritoNulo() {
     carrito.forEach((libro) => (libro.cantidad = 1));
     carrito.length = 0;
-    indexCarrito.innerHTML = "";
+    /* indexCarrito.innerHTML = ""; */
     carritoVacio();
     localStorage.setItem("carrito", JSON.stringify(carrito));
     carrito = [];
@@ -248,9 +243,3 @@ function pagarCarrito() {
         });
     });
 }
-
-// Falta que al agregar libros se sumen a los mismos, no aparte (si yo agrego dos
-// veces El Principito, aparece cada libro por separado, no sumándose a la misma cantidad)
-
-// ¿Por qué al comprar o vaciar carrito no me deja
-// realizar una nueva compra? (tengo que apretar F5)
