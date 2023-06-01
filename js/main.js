@@ -1,7 +1,7 @@
 // JavaScript correspondiente a index.html
 
 const indexCarrito = document.querySelector("#carrito__index");
-let libros = [];
+let libros;
 let carrito = [];
 
 fetch("js/catalogo.json")
@@ -25,7 +25,7 @@ fetch("js/catalogo.json")
                     <p class="libro__precio">$${libro.precio}</p>
 
                     <div class="alinear-boton">
-                        <button class="boton d-inline-block text-uppercase agregar__carrito" data-id="${libro.id}" onclick="agregarCarrito(${libro.id})">Comprar</button>
+                        <button class="boton d-inline-block text-uppercase" data-id="${libro.id}" onclick="agregarCarrito(${libro.id})">Comprar</button>
                     </div>
                 </div>`;
         }
@@ -80,7 +80,6 @@ function carritoVacio() {
         carritoDefault.innerHTML = `El carrito está vacío.`;
         indexCarrito.append(carritoDefault);
     }
-    localStorage.clear();
 }
 
 // MOSTRAR CARRITO
@@ -113,6 +112,11 @@ function mostrarCarrito() {
             <button type="button" class="botonVaciar boton py-2 px-3" onclick="vaciarCarrito()">Vaciar</button>
             <button type="button" class="botonComprar boton py-2 px-3" onclick="pagarCarrito()">Comprar</button>`;
         indexCarrito.append(carritoBotones);
+
+        sumarLibros();
+        restarLibros();
+        vaciarCarrito();
+        pagarCarrito();
     } else {
         carritoVacio();
     }
@@ -120,7 +124,6 @@ function mostrarCarrito() {
 
 // AGREGAR LIBROS
 function agregarCarrito(id) {
-    const carrito = cargarCarrito();
     let pos = carrito.findIndex(stock => stock.id == id);
 
     if (pos > -1) {
@@ -128,8 +131,9 @@ function agregarCarrito(id) {
     } else {
         const productos = cargarProductos();
         let producto = productos.find((stock) => stock.id == id);
-        producto.cantidad = 1;
-        carrito.push(producto);
+        let productoEnCarrito = { ...producto };
+        productoEnCarrito.cantidad = 1;
+        carrito.push(productoEnCarrito);
     }
 
     guardarCarrito(carrito);
@@ -198,7 +202,6 @@ function vaciarCarrito() {
 function carritoNulo() {
     carrito.forEach((libro) => (libro.cantidad = 1));
     carrito.length = 0;
-    /* indexCarrito.innerHTML = ""; */
     carritoVacio();
     localStorage.setItem("carrito", JSON.stringify(carrito));
     carrito = [];
