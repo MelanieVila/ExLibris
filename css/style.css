@@ -142,7 +142,7 @@ h4 {
   display: grid;
   align-items: center;
   justify-content: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   margin-left: 40px;
 }
 .carrito__contenedor .carrito__libro {

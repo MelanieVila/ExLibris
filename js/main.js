@@ -1,6 +1,6 @@
 // JavaScript correspondiente a index.html
 
-const indexCarrito = document.querySelector("#carrito__index");
+const indexCarrito = document.querySelector(".carrito__index");
 let libros;
 let carrito = [];
 
@@ -100,7 +100,8 @@ function mostrarCarrito() {
                     <button type="button" class="botonMenos boton py-2 px-3" onclick="restarLibros(${libro.id})">-</button>
                     <button class="boton py-2 px-3">${libro.cantidad}</button>
                     <button type="button" class="botonMas boton py-2 px-3" onclick="sumarLibros(${libro.id})">+</button>
-                </div>`;
+                </div>
+                <button type="button" class="botonRemover boton py-2 px-3" onclick="removerLibros(${libro.id})"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 7l16 0" /><path d="M10 11l0 6" /><path d="M14 11l0 6" /><path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" /><path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" /></svg></button>`;
             indexCarrito.append(librosCarrito);
         });
 
@@ -115,6 +116,7 @@ function mostrarCarrito() {
 
         sumarLibros();
         restarLibros();
+        removerLibros();
         vaciarCarrito();
         pagarCarrito();
     } else {
@@ -163,6 +165,22 @@ function restarLibros() {
             const producto = carrito[i];
             if (producto.cantidad > 1) {
                 producto.cantidad--;
+                localStorage.setItem("carrito", JSON.stringify(carrito));
+                mostrarCarrito();
+            }
+        });
+    });
+}
+
+// REMOVER UN LIBRO
+function removerLibros() {
+    const botonRemover = document.querySelectorAll(".botonRemover");
+    botonRemover.forEach((boton, i) => {
+        boton.addEventListener("click", (e) => {          
+            const producto = carrito[i];            
+            if (producto.cantidad = 1) {
+                const index = carrito.indexOf(producto);
+                carrito.splice(index, 1);
                 localStorage.setItem("carrito", JSON.stringify(carrito));
                 mostrarCarrito();
             }
